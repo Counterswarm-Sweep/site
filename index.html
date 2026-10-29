@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Counterswarm</title>
+<meta name="description" content="Attackers now run AI swarms against every app. Counterswarm runs your own swarm against you first, proves which holes are real, and hands you the fix.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single column story; hero + attack-path plate; "theirs" signal red vs "ours" teal */
+:root{
+  --bg:#f7f8fa; --panel:#ffffff; --ink:#121820; --muted:#566170; --line:#dde1e7;
+  --ours:#0e7a6b; --ours-soft:#e1f3ef; --theirs:#c23d2a; --theirs-soft:#fbe8e3;
+  --display:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e1318; --panel:#151c24; --ink:#e8edf2; --muted:#9aa5b2; --line:#283240;
+  --ours:#4cc3b0; --ours-soft:#11372f; --theirs:#ef7a63; --theirs-soft:#3a1c16; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--body)}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+nav{display:flex;align-items:center;justify-content:space-between;padding-block:18px}
+.logo{font:700 20px var(--display);letter-spacing:-.01em;display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none}
+.logo i{width:22px;height:22px;border-radius:6px;background:var(--ours);display:inline-block;position:relative}
+.logo i::after{content:"";position:absolute;inset:6px;border:2px solid var(--panel);border-radius:3px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 15px var(--body);padding:12px 18px;border-radius:10px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;line-height:1.08}
+h1{font-size:clamp(40px,6.4vw,72px);font-weight:700;letter-spacing:-.02em}
+h2{font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-.01em}
+h3{font:600 18px/1.3 var(--body)}
+p{margin:0;max-width:62ch}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-block:56px 72px}
+.hero p.lede{font-size:20px;color:var(--muted);margin-top:20px}
+.hero .num{margin-top:18px;font:500 15px var(--mono);color:var(--ours)}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+form.wait{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;max-width:520px}
+form.wait input{flex:1;min-width:220px;font:16px var(--body);padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--ink)}
+.small{font-size:14px;color:var(--muted);margin-top:10px}
+.plate{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;min-width:0}
+.plate svg{display:block;width:100%;height:auto}
+svg text{font-family:var(--body);fill:var(--ink)}
+svg .s{font-size:11.5px;fill:var(--muted)} svg .t{font-size:13px;font-weight:600}
+svg .n{fill:var(--panel);stroke:var(--line);stroke-width:1.2}
+svg .x{fill:var(--theirs-soft);stroke:var(--theirs);stroke-width:1.5}
+svg .o{fill:var(--ours-soft);stroke:var(--ours);stroke-width:1.5}
+svg .px{stroke:var(--theirs);stroke-width:2;fill:none;stroke-dasharray:6 5}
+svg .po{stroke:var(--ours);stroke-width:2;fill:none}
+section{padding-block:64px;border-top:1px solid var(--line)}
+section > .head{display:flex;flex-direction:column;gap:12px;margin-bottom:32px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card p{font-size:15.5px;color:var(--muted)}
+.step{font:500 12px var(--mono);color:var(--ours);letter-spacing:.08em}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15.5px;min-width:560px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+td.y{color:var(--ours);font-weight:600} td.n{color:var(--muted)}
+.quote{font:500 clamp(22px,3vw,30px)/1.3 var(--display);max-width:30ch}
+details{border-bottom:1px solid var(--line);padding-block:14px}
+summary{cursor:pointer;font-weight:600}
+details p{margin-top:8px;color:var(--muted)}
+footer{padding-block:40px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+a{color:inherit}
+@media (max-width:860px){.hero{grid-template-columns:1fr;padding-block:32px 48px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a class="logo" href="#"><i></i>Counterswarm</a>
+  <a class="btn ghost" href="#waitlist">Get early access</a>
+</nav>
+
+<header class="hero">
+  <div>
+    <span class="eyebrow">AI red team for software teams</span>
+    <h1 style="margin-top:16px">Hackers now attack with AI swarms. Attack yourself first.</h1>
+    <p class="lede">Counterswarm runs a swarm of AI agents against your code, API and app builds on every push and every new threat. Only proven holes reach you, each with a fix you can paste into Cursor or Claude Code.</p>
+    <p class="num">// a second AI from a different lab must agree before you hear about it</p>
+    <form class="wait" id="waitlist" onsubmit="joinWaitlist(event)">
+      <input id="email" name="entry.2084419659" type="email" required placeholder="you@company.com" aria-label="Work email">
+      <button class="btn" type="submit">Join the waitlist</button>
+    </form>
+    <p class="small">Free first scan · read-only GitHub access · your code is never used for training</p>
+  </div>
+  <div class="plate" role="img" aria-label="Example attack path: a new PDF route lets any signed-in user read another company's invoices">
+    <svg viewBox="0 0 440 360">
+      <text class="s" x="16" y="22">Example finding · invoicing SaaS</text>
+      <rect class="n" x="16" y="40" width="180" height="54" rx="10"/><text class="t" x="30" y="63">New PDF route</text><text class="s" x="30" y="81">/api/invoices/:id/pdf</text>
+      <rect class="n" x="244" y="40" width="180" height="54" rx="10"/><text class="t" x="258" y="63">Login check</text><text class="s" x="258" y="81">signed in? yes</text>
+      <rect class="x" x="244" y="140" width="180" height="54" rx="10"/><text class="t" x="258" y="163">Company check</text><text class="s" x="258" y="181">missing on this path</text>
+      <rect class="x" x="16" y="140" width="180" height="54" rx="10"/><text class="t" x="30" y="163">Invoice query</text><text class="s" x="30" y="181">by id only</text>
+      <path class="px" d="M196 67 H240"/><path class="px" d="M334 94 V136"/><path class="px" d="M244 167 H200"/>
+      <rect class="o" x="16" y="238" width="408" height="104" rx="12"/>
+      <text class="t" x="32" y="264" style="fill:var(--ours)">High · verified by 2 labs · proof: failing test</text>
+      <text class="s" x="32" y="288">Any signed-in user can download another company's invoices.</text>
+      <text class="s" x="32" y="308">Fix prompt: only return invoices whose company_id matches</text>
+      <text class="s" x="32" y="326">the signed-in user's company, and add a test for it.</text>
+    </svg>
+  </div>
+</header>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">Why now</span>
+    <h2>Finding a hole got cheap for attackers. Fixing it has to get cheap for you.</h2>
+    <p>AI agents now scan every public app for weak spots, and new vulnerabilities are exploited within hours of disclosure. Big companies have security teams. Most SaaS and mobile teams have nobody watching.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Hours, not days</h3><p>Critical flaws are exploited within hours of going public. We watch advisories and researcher chatter around the clock and tell you if you are exposed.</p></div>
+    <div class="card"><h3>Logic bugs scanners miss</h3><p>The costly bugs are valid code: one customer reading another's data, a free plan reaching paid features. Agents that know your business rules find them.</p></div>
+    <div class="card"><h3>No security team needed</h3><p>Plain-English findings, ranked by real exposure, with a fix you can paste. Quiet until something is real.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">How it works</span>
+    <h2>Your own swarm, on every change</h2>
+  </div>
+  <div class="grid">
+    <div class="card"><span class="step">01 · CONNECT</span><h3>Two minutes</h3><p>Install the read-only GitHub app, upload a mobile build if you have one, and tell us who your users and tenants are.</p></div>
+    <div class="card"><span class="step">02 · MAP</span><h3>Learns your app</h3><p>We map routes, logins, data and money paths once, so every later run is fast and focused.</p></div>
+    <div class="card"><span class="step">03 · ATTACK</span><h3>Swarm on every push</h3><p>Scouts sweep the change and the code around it; a deep-dive agent proves each lead across files.</p></div>
+    <div class="card"><span class="step">04 · VERIFY</span><h3>Two labs must agree</h3><p>A model from a different AI company re-checks every finding from four angles. Anything unproven is dropped.</p></div>
+    <div class="card"><span class="step">05 · FIX</span><h3>Paste the fix</h3><p>You get the file, who can reach it, the evidence and a fix prompt for Cursor, Lovable or Claude Code, by email or Slack.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">What the swarm checks</span>
+    <h2>Built for how you ship</h2>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>B2B SaaS</h3><p>Tenant isolation, roles and stale access, SSO and sessions, API key scope, webhook signatures, billing bypass.</p></div>
+    <div class="card"><h3>Mobile apps</h3><p>Keys hidden in iOS and Android builds, open Firebase and Supabase rules, the real API your app calls, purchase checks.</p></div>
+    <div class="card"><h3>AI-built apps</h3><p>Supabase row-level security, service keys in the frontend, public storage, routes missing ownership checks.</p></div>
+    <div class="card"><h3>AI agent apps</h3><p>Over-powerful tools, token storage, untrusted content reaching actions, irreversible steps with no approval.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">Why it is different</span>
+    <h2>A security team on call, not a scanner you have to run</h2>
+  </div>
+  <div class="tbl"><table>
+    <tr><th></th><th>Counterswarm</th><th>Free scanners</th><th>One-off AI scans</th></tr>
+    <tr><td>Runs on every push and new threat</td><td class="y">Yes</td><td class="n">Partly</td><td class="n">When you start it</td></tr>
+    <tr><td>Early warning before advisories</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td></tr>
+    <tr><td>Business-logic bugs</td><td class="y">Yes</td><td class="n">No</td><td class="n">Sometimes</td></tr>
+    <tr><td>Verified by a second AI lab</td><td class="y">Yes</td><td class="n">No</td><td class="n">No</td></tr>
+    <tr><td>Remembers what you fixed or ignored</td><td class="y">Yes</td><td class="n">Partly</td><td class="n">No</td></tr>
+    <tr><td>Fix prompt for your AI coding tool</td><td class="y">Yes</td><td class="n">No</td><td class="n">Patch files</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">Safe by design</span>
+    <h2>We only ever attack what you own</h2>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Read-only</h3><p>Read-only repo access by default. No secrets, no production data, no changes without your approval.</p></div>
+    <div class="card"><h3>Your systems only</h3><p>Live tests run on staging, only after you verify the domain and approve the scope.</p></div>
+    <div class="card"><h3>Your code stays yours</h3><p>Throwaway sandboxes, deleted after every run. Zero-retention model providers. Never used for training.</p></div>
+    <div class="card"><h3>See every action</h3><p>A full activity log of what was checked, found and ruled out on each run. Pause any time.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="head"><span class="eyebrow">Questions</span><h2>FAQ</h2></div>
+  <details><summary>Does it replace a penetration test?</summary><p>It runs continuously and catches most common and business-logic holes between pentests. For some compliance needs you may still want a human sign-off.</p></details>
+  <details><summary>Which stacks do you support?</summary><p>Any web stack and any iOS or Android build. We are tuned for Next.js, Supabase, Node and Python.</p></details>
+  <details><summary>What does it cost?</summary><p>Your first scan is free. Team plans start at $499 a month for up to five repos or apps.</p></details>
+  <details><summary>Will it make my app unhackable?</summary><p>No tool can. It closes the common holes and shrinks your exposure window from days to hours.</p></details>
+</section>
+
+<section style="text-align:left">
+  <p class="quote">Their swarm scans everyone. Yours scans you first.</p>
+  <div class="ctas"><a class="btn" href="#waitlist">Join the waitlist</a><a class="btn ghost" href="mailto:founder@counterswarm.si">founder@counterswarm.si</a></div>
+</section>
+
+<footer>
+  <span>© 2026 Counterswarm</span>
+  <span>founder@counterswarm.si</span>
+</footer>
+</div>
+<script>
+function joinWaitlist(e){
+  e.preventDefault();
+  var f=e.target, b=f.querySelector('button');
+  b.disabled=true; b.textContent='Adding you...';
+  fetch('https://docs.google.com/forms/d/e/1FAIpQLSdDuj3iIUeXXzS-ITRNz0VIaaYQPKjEA0_7HRfWLFQcH9DJHQ/formResponse',{method:'POST',mode:'no-cors',body:new FormData(f)})
+    .then(function(){ b.textContent='You are on the list'; f.querySelector('input').value=''; })
+    .catch(function(){ b.disabled=false; b.textContent='Try again'; });
+}
+</script>
+</body>
+</html>
