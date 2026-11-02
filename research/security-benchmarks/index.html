@@ -1,0 +1,348 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/styles/BaseLayout.css"><link rel="stylesheet" href="/styles/PageSections.css"><link rel="stylesheet" href="/styles/resources.css"><link rel="icon" href="/logos/counterswarm-mark.svg"><script type="module" src="/_astro/SiteHeader.astro_astro_type_script_index_0_lang.CGroQ0Gj.js"></script><title>Security evaluation benchmark | Counterswarm</title><meta name="description" content="Explore the trade-off between security-task recall and evaluation cost, compare sample pipelines, or load your own local CSV results."><meta name="robots" content="index, follow, max-image-preview:large"><link rel="canonical" href="https://counterswarm.si/research/security-benchmarks/"><meta property="og:title" content="Security evaluation benchmark | Counterswarm"><meta property="og:description" content="Explore the trade-off between security-task recall and evaluation cost, compare sample pipelines, or load your own local CSV results."><meta property="og:type" content="article"><meta property="og:url" content="https://counterswarm.si/research/security-benchmarks/"><meta property="og:site_name" content="Counterswarm"><meta property="og:image" content="https://counterswarm.si/images/counterswarm-social.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Counterswarm — Continuous AI Defence against AI Attacks"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Security evaluation benchmark | Counterswarm"><meta name="twitter:description" content="Explore the trade-off between security-task recall and evaluation cost, compare sample pipelines, or load your own local CSV results."><meta name="twitter:image" content="https://counterswarm.si/images/counterswarm-social.png"><meta name="twitter:image:alt" content="Counterswarm — Continuous AI Defence against AI Attacks"><meta name="google-site-verification" content="kIjHCVmIr7iEO1oZzarDtn5sOn23jI_y-7J6AuDCclw"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://counterswarm.si/#organization","name":"Counterswarm","url":"https://counterswarm.si/","logo":"https://counterswarm.si/logos/counterswarm-mark.svg"},{"@type":"TechArticle","headline":"Security evaluation benchmark","description":"Explore the trade-off between security-task recall and evaluation cost, compare sample pipelines, or load your own local CSV results.","url":"https://counterswarm.si/research/security-benchmarks/","image":"https://counterswarm.si/images/counterswarm-social.png","author":{"@type":"Organization","name":"Counterswarm editorial"},"publisher":{"@id":"https://counterswarm.si/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://counterswarm.si/"},{"@type":"ListItem","position":2,"name":"Security evaluation benchmark","item":"https://counterswarm.si/research/security-benchmarks/"}]}]}</script><link rel="stylesheet" href="/styles/brand.css"></head><body><header class="site-header" data-site-header="" data-theme="light" data-surface="page" data-page-scrolled="false" data-scrolled="false" data-navigation-hidden="false" data-mobile-menu-open="false" data-desktop-dropdown-open="false" data-sticky-request-demo-mode="hero-anchor" data-sticky-request-demo-visible="false" data-astro-cid-ctg3m53h="">
+  <div class="site-header__desktop" data-astro-cid-ctg3m53h="">
+    <div class="site-header__desktop-bar" data-astro-cid-ctg3m53h="">
+      <a class="site-header__brand" href="/" aria-label="Counterswarm" data-astro-cid-ctg3m53h="">
+        <span class="site-header__brand-mark" aria-hidden="true" data-astro-cid-ctg3m53h="">
+          <span class="site-header__logo-wordmark" data-astro-cid-ctg3m53h=""></span>
+          <span class="site-header__logo-glyph" data-astro-cid-ctg3m53h=""></span>
+        </span>
+        <span class="visually-hidden" data-astro-cid-ctg3m53h="">Counterswarm</span>
+      </a>
+      <nav class="site-header__desktop-nav" aria-label="Primary" data-astro-cid-ctg3m53h="">
+        <button class="site-header__link site-header__dropdown-trigger" type="button" data-header-dropdown-trigger="use-cases" aria-expanded="false" aria-controls="site-header-panel-use-cases" aria-haspopup="true" data-astro-cid-ctg3m53h="">
+          <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--xs text--family-body text--regular site-header__nav-label">
+            Product
+          </span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="site-header__chevron" aria-hidden="true" data-astro-cid-ctg3m53h="true">
+            <path d="M0.53125 0.530273L4.53125 4.53027L8.53125 0.530273" stroke="currentColor" stroke-width="1.5"></path>
+          </svg> </button><a class="site-header__link" href="/research/" data-astro-cid-ctg3m53h="">
+          <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--xs text--family-body text--regular site-header__nav-label">
+            Research
+          </span> </a><a data-astro-cid-ctg3m53h="" href="/blog/" class="site-header__link">
+          <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--xs text--family-body text--regular site-header__nav-label">Blog</span>
+          
+        </a>
+      </nav>
+      <div class="site-header__desktop-actions" data-astro-cid-ctg3m53h="">
+        <span class="site-header__request-demo-shell site-header__request-demo-shell--desktop" data-astro-cid-ctg3m53h="">
+          <a href="https://calendly.com/muzecmo/yourgm-intro" data-demo-booking="" aria-hidden="true" tabindex="-1" data-astro-cid-ctg3m53h="true" data-astro-cid-vnzlvqnm="true" class="button button--primary button--sm site-header__action site-header__action--primary site-header__request-demo site-header__request-demo--desktop">
+            Get started
+          </a>
+        </span>
+      </div>
+    </div>
+    <div class="header-mega-menu" id="site-header-panel-use-cases" data-header-dropdown-panel="use-cases" aria-label="Product" hidden="" data-astro-cid-etvpeqvs="">
+      <div data-header-theme="light" data-header-surface="page" data-spacing-tone="light" data-astro-cid-etvpeqvs="true" data-astro-cid-sh445jdo="true" class="section section--transparent section--none header-mega-menu__section">
+        <div data-astro-cid-sh445jdo="true" data-astro-cid-dm6k5sok="true" class="container container--default section__inner">
+          <div data-astro-cid-etvpeqvs="true" data-astro-cid-sptvla6t="true" class="cluster cluster--md cluster--column cluster--align-start cluster--justify-start cluster--wrap">
+            <div class="header-mega-menu-link-list" style="
+                --header-mega-menu-row-count: 3;
+                --header-mega-menu-column-count: 2;
+                --header-mega-menu-list-max-width: 100%;
+              " role="list" data-astro-cid-ynh6a3gs="">
+              <div role="listitem" data-astro-cid-ynh6a3gs="">
+                <a class="header-mega-menu-link-list__link" href="/platform/" data-astro-cid-ynh6a3gs="">
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--medium">
+                    Platform
+                  </span>
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--regular header-mega-menu-link-list__description">
+                    Your autonomous security command center
+                  </span>
+                </a> </div><div role="listitem" data-astro-cid-ynh6a3gs="">
+                <a class="header-mega-menu-link-list__link" href="/code/" data-astro-cid-ynh6a3gs="">
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--medium">
+                    Code
+                  </span>
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--regular header-mega-menu-link-list__description">
+                    Find vulnerabilities scanners were never built to see
+                  </span>
+                </a> </div><div role="listitem" data-astro-cid-ynh6a3gs="">
+                <a class="header-mega-menu-link-list__link" href="/supply-chain/" data-astro-cid-ynh6a3gs="">
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--medium">
+                    Supply chain
+                  </span>
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--regular header-mega-menu-link-list__description">
+                    Know what's reachable, not just what's present
+                  </span>
+                </a> </div><div role="listitem" data-astro-cid-ynh6a3gs="">
+                <a class="header-mega-menu-link-list__link" href="/secrets/" data-astro-cid-ynh6a3gs="">
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--medium">
+                    Secrets
+                  </span>
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--regular header-mega-menu-link-list__description">
+                    Stop leaks before they leave the repo
+                  </span>
+                </a> </div><div role="listitem" data-astro-cid-ynh6a3gs="">
+                <a class="header-mega-menu-link-list__link" href="/agentic-pentesting/" data-astro-cid-ynh6a3gs="">
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--medium">
+                    Agentic Pentesting
+                  </span>
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--regular header-mega-menu-link-list__description">
+                    Find vulnerabilities in code that's already running
+                  </span>
+                </a> </div><div role="listitem" data-astro-cid-ynh6a3gs="">
+                <a class="header-mega-menu-link-list__link" href="/dependency-firewall/" data-astro-cid-ynh6a3gs="">
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--medium">
+                    Dependency Firewall
+                  </span>
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--regular header-mega-menu-link-list__description">
+                    Detect malicious behavior before it spreads through your environment
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> </div>
+  </div>
+  <div class="site-header__mobile-bar" data-astro-cid-ctg3m53h="">
+    <a class="site-header__brand" href="/" aria-label="Counterswarm" data-astro-cid-ctg3m53h="">
+      <span class="site-header__brand-mark" aria-hidden="true" data-astro-cid-ctg3m53h="">
+        <span class="site-header__logo-wordmark" data-astro-cid-ctg3m53h=""></span>
+        <span class="site-header__logo-glyph" data-astro-cid-ctg3m53h=""></span>
+      </span>
+      <span class="visually-hidden" data-astro-cid-ctg3m53h="">Counterswarm</span>
+    </a>
+    <button class="site-header__mobile-toggle" type="button" aria-expanded="false" aria-controls="site-header-mobile-nav" data-mobile-nav-toggle="" data-astro-cid-ctg3m53h="">
+      <span class="site-header__menu-icon" aria-hidden="true" data-astro-cid-ctg3m53h=""></span>
+      <span class="visually-hidden" data-mobile-nav-toggle-label="" data-astro-cid-ctg3m53h="">Open navigation</span>
+    </button>
+  </div>
+  <div class="site-header__mobile-overlay" data-mobile-nav-overlay="" hidden="" data-astro-cid-ctg3m53h="">
+    <nav class="site-header__mobile-nav" id="site-header-mobile-nav" aria-label="Primary" data-astro-cid-ctg3m53h="">
+      <div class="site-header__mobile-group" data-astro-cid-ctg3m53h="">
+        <button class="site-header__mobile-group-toggle" type="button" data-mobile-dropdown-toggle="use-cases" aria-expanded="false" aria-controls="site-header-mobile-panel-use-cases" data-astro-cid-ctg3m53h="">
+          <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--display-nav text--family-display text--semibold">
+            Product
+          </span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="site-header__chevron" aria-hidden="true" data-astro-cid-ctg3m53h="true">
+            <path d="M0.53125 0.530273L4.53125 4.53027L8.53125 0.530273" stroke="currentColor" stroke-width="1.5"></path>
+          </svg>
+        </button>
+        <div class="site-header__mobile-group-panel" id="site-header-mobile-panel-use-cases" data-mobile-dropdown-panel="use-cases" hidden="" data-astro-cid-ctg3m53h="">
+          <div class="site-header__mobile-group-links" data-astro-cid-ctg3m53h="">
+            <a href="/platform/" data-mobile-nav-close="" data-astro-cid-ctg3m53h="">
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--semibold site-header__mobile-group-label">
+                Platform
+              </span>
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--regular site-header__mobile-group-description">
+                Your autonomous security command center
+              </span> </a><a href="/code/" data-mobile-nav-close="" data-astro-cid-ctg3m53h="">
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--semibold site-header__mobile-group-label">
+                Code
+              </span>
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--regular site-header__mobile-group-description">
+                Find vulnerabilities scanners were never built to see
+              </span> </a><a href="/supply-chain/" data-mobile-nav-close="" data-astro-cid-ctg3m53h="">
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--semibold site-header__mobile-group-label">
+                Supply chain
+              </span>
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--regular site-header__mobile-group-description">
+                Know what's reachable, not just what's present
+              </span> </a><a href="/secrets/" data-mobile-nav-close="" data-astro-cid-ctg3m53h="">
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--semibold site-header__mobile-group-label">
+                Secrets
+              </span>
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--regular site-header__mobile-group-description">
+                Stop leaks before they leave the repo
+              </span> </a><a href="/agentic-pentesting/" data-mobile-nav-close="" data-astro-cid-ctg3m53h="">
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--semibold site-header__mobile-group-label">
+                Agentic Pentesting
+              </span>
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--regular site-header__mobile-group-description">
+                Find vulnerabilities in code that's already running
+              </span> </a><a href="/dependency-firewall/" data-mobile-nav-close="" data-astro-cid-ctg3m53h="">
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--semibold site-header__mobile-group-label">
+                Dependency Firewall
+              </span>
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--regular site-header__mobile-group-description">
+                Detect malicious behavior before it spreads through your environment
+              </span>
+            </a>
+          </div>
+        </div> </div><a class="site-header__mobile-link" href="/research/" data-mobile-nav-close="" data-astro-cid-ctg3m53h="">
+        <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--display-nav text--family-display text--semibold">
+          Research
+        </span> </a><a data-astro-cid-ctg3m53h="" href="/blog/" class="site-header__mobile-link" data-mobile-nav-close="">
+          <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--display-nav text--family-display text--semibold">Blog</span>
+          
+        </a>
+    </nav>
+    <div class="site-header__mobile-actions" data-astro-cid-ctg3m53h="">
+      <span class="site-header__request-demo-shell site-header__request-demo-shell--mobile" data-astro-cid-ctg3m53h="">
+        <a href="https://calendly.com/muzecmo/yourgm-intro" data-demo-booking="" data-mobile-nav-close="true" data-astro-cid-ctg3m53h="true" data-astro-cid-vnzlvqnm="true" class="button button--primary button--md site-header__action site-header__action--primary site-header__request-demo site-header__request-demo--mobile">
+          Get started
+        </a>
+      </span>
+    </div>
+  </div>
+</header>
+<main id="main-content" class="resource-page"><nav aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/research/">Research</a></nav><header class="resource-heading"><p class="resource-kicker">Research</p><h1>Security evaluation benchmark</h1><p class="resource-description">Explore the trade-off between security-task recall and evaluation cost, compare sample pipelines, or load your own local CSV results.</p><p class="resource-byline">Counterswarm editorial <span aria-hidden="true">·</span> 3 min read</p></header><section data-security-benchmark="" aria-label="Interactive security evaluation explorer"><p class="benchmark-sample" data-benchmark-status="" role="status">Illustrative sample data — not measured product results.</p><div class="benchmark-controls"><label>Objective<select data-benchmark-objective=""><option value="detection">Detection</option><option value="validation">Validation</option><option value="differential">Differential analysis</option></select></label><label><span>Frontier only</span><input type="checkbox" data-benchmark-frontier=""></label><button type="button" data-benchmark-export="">Export CSV</button><button type="button" data-benchmark-reset="">Reset examples</button><label>Load your results<input type="file" accept=".csv,text/csv" data-benchmark-file=""></label></div><p class="benchmark-explanation">Sample values demonstrate cost–recall trade-offs. Upload a local CSV with name, objective, cost and recall columns to explore your own results. The file is not uploaded.</p><svg class="benchmark-chart" viewBox="0 0 1000 410" role="img" aria-label="Scatter plot of task recall against evaluation cost"></svg><div class="benchmark-table-wrap"><table class="benchmark-table"><caption>Selected evaluation results</caption><thead><tr><th scope="col"><button data-sort="name">Pipeline ↕</button></th><th scope="col"><button data-sort="cost">Cost per task ↕</button></th><th scope="col"><button data-sort="recall">Task recall ↕</button></th></tr></thead><tbody></tbody></table></div></section><script type="module" src="/scripts/interactions/security-benchmark.js"></script><figure class="resource-figure"><img src="/illustrations/resources/security-benchmarks.svg" width="1000" height="440" alt="A reproducible security evaluation explanatory diagram" fetchpriority="low"><figcaption>Explanatory diagram · Counterswarm</figcaption></figure><div class="resource-prose"><section id="section-1"><h2>Compare complete systems, not just model names</h2><p>A security evaluation should measure the whole pipeline: the model, tools, repository context, task budget, validation process and reporting rules. Changing any of those components can change the outcome. A score without those conditions is difficult to reproduce or interpret.</p><p>The interactive explorer above starts with illustrative sample pipelines. These numbers are examples for learning how the chart and filters work. They are not measured Counterswarm product results, rankings of commercial models, or a claim of research ownership. Load your own CSV to compare actual runs under a documented evaluation protocol.</p></section><section id="section-2"><h2>Choose an objective before interpreting recall</h2><p>Detection asks whether a system identifies a relevant weakness. Validation asks whether the reported weakness is supported by evidence of a real security impact. Differential analysis asks whether a particular change introduced or removed a weakness. These are related tasks, but success on one does not establish success on the others.</p><p>Use a consistent definition of a correct result. Record how ambiguous cases, duplicate findings, partially correct explanations and failed tool calls are handled. A human review process should be applied consistently across all compared pipelines rather than only to promising outputs.</p></section><section id="section-3"><h2>Read the cost–coverage frontier</h2><p>A pipeline is dominated when another pipeline achieves at least as much recall at no greater cost, with an improvement on at least one dimension. Showing the nondominated frontier makes the trade-off easier to inspect. It does not identify one universally best pipeline: a team may prefer a cheaper option for routine review and a more expensive option for a narrow, high-impact assessment.</p><p>Treat cost as an explicitly defined quantity. Model-token charges, compute, external tool fees, analyst time and repeated attempts are different expenses. The explorer uses the supplied cost per evaluated task in US dollars; make sure all uploaded rows use the same cost definition.</p></section><section id="section-4"><h2>Make an evaluation reproducible</h2><p>Keep the task set separate from prompt development and record the exact revision of code or configuration being assessed. Document tools, network access, time limits, retry rules, context selection and output review. A held-out test set reduces accidental tuning to the answers, but it does not remove every source of data contamination or selection bias.</p><p>Run enough independent tasks to understand variation. If outcomes are binary, report uncertainty around the success rate and inspect failure categories. A small difference in a single run is weak evidence for a durable capability advantage. Compare on representative workloads and repeat after material system changes.</p></section><section id="section-5"><h2>Use your own local results</h2><p>CSV files should contain name, objective, cost and recall columns. The objective must be detection, validation or differential; recall is a percentage from zero to one hundred. The file is read in your browser and is not uploaded by this explorer. Export downloads the currently filtered rows so that your comparison can be reviewed with its evaluation notes.</p><p>Before publishing a real benchmark, retain the task definitions, scoring rubric and provenance for the results. Explain what was measured and what was not. Benchmark performance is evidence about a defined evaluation, not a general guarantee that a system will prevent every attack.</p></section><section class="resource-sources"><h2>Sources and further reading</h2><ul><li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">NIST: AI Risk Management Framework</a></li><li><a href="https://csrc.nist.gov/Projects/ssdf" target="_blank" rel="noopener noreferrer">NIST: Secure Software Development Framework</a></li></ul></section></div><p class="resource-return"><a href="/research/">← All research</a></p></main><div class="site-footer-panel" data-astro-cid-5iapzycl="">
+  <section id="enterprise-ready" data-header-theme="dark" data-header-surface="dark-900" data-spacing-tone="dark" style="
+      --enterprise-heading-space: clamp(6rem, 11vw, 11rem);
+      padding-block-start: var(--enterprise-heading-space);
+    " data-astro-cid-ktncdrtu="true" data-astro-cid-sh445jdo="true" class="section section--dark-900 section--default enterprise-readiness-section">
+    <div data-astro-cid-sh445jdo="true" data-astro-cid-dm6k5sok="true" class="container container--default section__inner">
+      <div data-astro-cid-ktncdrtu="true" data-astro-cid-bdabvoub="true" class="stack stack--2xl ent">
+        <div data-astro-cid-ktncdrtu="true" data-astro-cid-jvnigumd="true" class="measure measure--four-fifths measure--text-align-left">
+          <h2 data-astro-cid-ktncdrtu="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--section-lead text--family-body text--medium ent-heading">
+            <span class="ent-heading__dim" data-astro-cid-ktncdrtu="">The platform brings together</span>
+            security controls for connected scans, reviewed fixes, and scoped testing.
+          </h2>
+        </div>
+        <div class="grid grid--3 grid--gap-xl ent-cards" data-astro-cid-ktncdrtu="true" data-astro-cid-2rmnt3h5="">
+          <article class="ent-card" data-astro-cid-ktncdrtu="">
+            <img src="/uploads/enterprise/metallic/governance.png" alt="" class="ent-card__image" loading="lazy" decoding="async" width="720" height="720" data-astro-cid-ktncdrtu="true">
+            <div data-astro-cid-ktncdrtu="true" data-astro-cid-bdabvoub="true" class="stack stack--md ent-card__copy">
+              <h3 data-astro-cid-ktncdrtu="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium">
+                Governance
+              </h3>
+              <p data-astro-cid-ktncdrtu="true" data-astro-cid-z2jvtqdt="true" class="text text--secondary text--sm text--family-body text--regular ent-card__body">
+                Configure fix approvals, protected paths, and account settings in one place.
+              </p>
+            </div> </article><article class="ent-card" data-astro-cid-ktncdrtu="">
+            <img src="/uploads/enterprise/metallic/system-of-record.png" alt="" class="ent-card__image" loading="lazy" decoding="async" width="720" height="720" data-astro-cid-ktncdrtu="true">
+            <div data-astro-cid-ktncdrtu="true" data-astro-cid-bdabvoub="true" class="stack stack--md ent-card__copy">
+              <h3 data-astro-cid-ktncdrtu="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium">
+                System of record
+              </h3>
+              <p data-astro-cid-ktncdrtu="true" data-astro-cid-z2jvtqdt="true" class="text text--secondary text--sm text--family-body text--regular ent-card__body">
+                Review findings and fix activity in one place, with finding exports available.
+              </p>
+            </div> </article><article class="ent-card" data-astro-cid-ktncdrtu="">
+            <img src="/uploads/enterprise/metallic/audit-trail.png" alt="" class="ent-card__image" loading="lazy" decoding="async" width="720" height="720" data-astro-cid-ktncdrtu="true">
+            <div data-astro-cid-ktncdrtu="true" data-astro-cid-bdabvoub="true" class="stack stack--md ent-card__copy">
+              <h3 data-astro-cid-ktncdrtu="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium">
+                Audit trail
+              </h3>
+              <p data-astro-cid-ktncdrtu="true" data-astro-cid-z2jvtqdt="true" class="text text--secondary text--sm text--family-body text--regular ent-card__body">
+                Review recorded scan activity and finding state changes.
+              </p>
+            </div> </article><article class="ent-card" data-astro-cid-ktncdrtu="">
+            <img src="/uploads/enterprise/metallic/role-based-access.png" alt="" class="ent-card__image" loading="lazy" decoding="async" width="720" height="720" data-astro-cid-ktncdrtu="true">
+            <div data-astro-cid-ktncdrtu="true" data-astro-cid-bdabvoub="true" class="stack stack--md ent-card__copy">
+              <h3 data-astro-cid-ktncdrtu="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium">
+                Account access
+              </h3>
+              <p data-astro-cid-ktncdrtu="true" data-astro-cid-z2jvtqdt="true" class="text text--secondary text--sm text--family-body text--regular ent-card__body">
+                Account membership controls access to connected repositories and findings.
+              </p>
+            </div> </article><article class="ent-card" data-astro-cid-ktncdrtu="">
+            <img src="/uploads/enterprise/metallic/byok.png" alt="" class="ent-card__image" loading="lazy" decoding="async" width="720" height="720" data-astro-cid-ktncdrtu="true">
+            <div data-astro-cid-ktncdrtu="true" data-astro-cid-bdabvoub="true" class="stack stack--md ent-card__copy">
+              <h3 data-astro-cid-ktncdrtu="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium">
+                Customer-controlled BYOK
+              </h3>
+              <p data-astro-cid-ktncdrtu="true" data-astro-cid-z2jvtqdt="true" class="text text--secondary text--sm text--family-body text--regular ent-card__body">
+                Bring your own encryption key. Your data stays encrypted with keys you control.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section data-header-theme="dark" data-header-surface="dark-900" data-spacing-tone="dark" aria-label="Get started" data-site-footer-demo-anchor="true" data-astro-cid-37fxchfa="true" data-astro-cid-z42i2aqv="true" data-astro-cid-sh445jdo="true" class="section section--dark-900 section--none site-footer-cta">
+    <div data-astro-cid-sh445jdo="true" data-astro-cid-dm6k5sok="true" class="container container--default section__inner">
+      <div class="site-footer-cta__shell" data-astro-cid-z42i2aqv="">
+        <div class="site-footer-cta__inner" data-astro-cid-z42i2aqv="">
+          <div class="motif-frame site-footer-cta__headline" data-motif-frame="" data-motif-ready="false" data-astro-cid-z42i2aqv="true" data-astro-cid-xp257fqc="">
+            <h2 data-motif-title="true" data-astro-cid-z42i2aqv="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--display-section text--family-body text--medium site-footer-cta__title">
+              <span data-astro-cid-z42i2aqv="">Secure on Counterswarm</span>
+            </h2>
+          </div>
+          <div data-astro-cid-z42i2aqv="true" data-astro-cid-jvnigumd="true" class="measure measure--xl measure--text-align-center">
+            <div data-astro-cid-z42i2aqv="true" data-astro-cid-sptvla6t="true" class="cluster cluster--md cluster--row cluster--align-center cluster--justify-center site-footer-cta__row">
+              <a href="https://calendly.com/muzecmo/yourgm-intro" data-demo-booking="" data-astro-cid-z42i2aqv="true" data-astro-cid-vnzlvqnm="true" class="button button--primary button--md">
+                Get started
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> </section><footer data-header-theme="dark" data-header-surface="dark-900" data-spacing-tone="dark" data-astro-cid-gcn2mc3v="true" data-astro-cid-sh445jdo="true" class="section section--dark-900 section--compact site-footer">
+    <div data-astro-cid-sh445jdo="true" data-astro-cid-dm6k5sok="true" class="container container--default section__inner">
+      <div class="site-footer__layout" data-astro-cid-gcn2mc3v="">
+        <div class="site-footer__brand" data-astro-cid-gcn2mc3v="">
+          <div data-astro-cid-gcn2mc3v=""><img src="/logos/logo_small.svg" alt="Counterswarm logo" data-astro-cid-gcn2mc3v=""></div>
+          
+        </div>
+        <div data-astro-cid-gcn2mc3v="true" data-astro-cid-sptvla6t="true" class="cluster cluster--xl cluster--row cluster--align-start cluster--justify-start cluster--wrap site-footer__links">
+          <div class="link-list link-list--dark" data-astro-cid-gcn2mc3v="true" data-astro-cid-pgtcdogx="">
+            <p data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular link-list__heading">
+              Product
+            </p>
+            <div data-astro-cid-pgtcdogx="true" data-astro-cid-sptvla6t="true" class="cluster cluster--sm cluster--column cluster--align-start cluster--justify-start cluster--wrap link-list__links">
+              <div data-astro-cid-pgtcdogx="">
+                <a href="/platform/" data-astro-cid-pgtcdogx="">
+                  <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                    Platform
+                  </span>
+                </a> </div><div data-astro-cid-pgtcdogx="">
+                <a href="/code/" data-astro-cid-pgtcdogx="">
+                  <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                    Code
+                  </span>
+                </a> </div><div data-astro-cid-pgtcdogx="">
+                <a href="/supply-chain/" data-astro-cid-pgtcdogx="">
+                  <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                    Supply chain
+                  </span>
+                </a> </div><div data-astro-cid-pgtcdogx="">
+                <a href="/secrets/" data-astro-cid-pgtcdogx="">
+                  <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                    Secrets
+                  </span>
+                </a> </div><div data-astro-cid-pgtcdogx="">
+                <a href="/agentic-pentesting/" data-astro-cid-pgtcdogx="">
+                  <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                    Agentic Pentesting
+                  </span>
+                </a> </div><div data-astro-cid-pgtcdogx="">
+                <a href="/dependency-firewall/" data-astro-cid-pgtcdogx="">
+                  <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                    Dependency Firewall
+                  </span>
+                </a>
+              </div>
+            </div> </div><div class="link-list link-list--dark" data-astro-cid-gcn2mc3v="true" data-astro-cid-pgtcdogx="">
+            <p data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular link-list__heading">
+              Resources
+            </p>
+            <div data-astro-cid-pgtcdogx="true" data-astro-cid-sptvla6t="true" class="cluster cluster--sm cluster--column cluster--align-start cluster--justify-start cluster--wrap link-list__links">
+              <div data-astro-cid-pgtcdogx="">
+                 </div><div data-astro-cid-pgtcdogx="">
+                <a href="/blog/" data-astro-cid-pgtcdogx="">
+                  <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                    Blog
+                  </span>
+                </a> </div><div data-astro-cid-pgtcdogx="">
+                <a href="/research/" data-astro-cid-pgtcdogx="">
+                  <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                    Research
+                  </span>
+                </a> </div><div data-astro-cid-pgtcdogx="">
+                <a href="https://calendly.com/muzecmo/yourgm-intro" data-demo-booking="" data-astro-cid-pgtcdogx="">
+                  <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                    Book a demo
+                  </span>
+                </a> </div><div data-astro-cid-pgtcdogx="">
+                
+              </div>
+            </div> </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom" data-astro-cid-gcn2mc3v="">
+        <div class="site-footer__bottom-left" data-astro-cid-gcn2mc3v="">
+          <span class="site-footer__copyright" data-astro-cid-gcn2mc3v="">© 2026 Counterswarm</span>
+          <a href="/legal/privacy-policy/" data-astro-cid-gcn2mc3v="">Privacy Policy</a>
+          <a href="/legal/terms-conditions/" data-astro-cid-gcn2mc3v="">Terms of Service</a>
+          <a href="/legal/terms-conditions/" data-astro-cid-gcn2mc3v="">Terms &amp; Conditions</a>
+        </div>
+        <div class="site-footer__bottom-right" data-astro-cid-gcn2mc3v="">
+          
+        </div>
+      </div>
+    </div>
+  </footer></div>
+<script type="module" src="/scripts/conversion.js"></script></body></html>

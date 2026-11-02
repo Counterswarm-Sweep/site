@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="601" height="801" viewBox="588 40 601 801" fill="none">
+  <g transform="translate(0 323)">
+    <path id="Vector 3392" d="M693 196.527C693 259.057 693 249.916 693 249.916V292.633C693 300.903 699.704 307.607 707.974 307.607H841.216" stroke="#479DFF" stroke-width="2" />
+    <path id="Vector 3393" d="M977.584 368.09V435" stroke="#479DFF" stroke-width="2" />
+    <g id="remedy">
+      <rect id="Rectangle 34629777" x="799.983" y="300.792" width="43.0904" height="12.6299" rx="5.20056" fill="#479DFF" />
+      <rect id="Rectangle 34629779" x="811.87" y="302.688" width="19.3164" height="8.84096" rx="1.48588" fill="#0D69D3" />
+    </g>
+    <g id="remedy_2">
+      <rect id="Rectangle 34629777_2" x="983.899" y="325" width="43.0904" height="12.6299" rx="5.20056" transform="rotate(90 983.899 325)" fill="#479DFF" />
+      <rect id="Rectangle 34629779_2" x="981.999" y="336.886" width="19.3164" height="8.84096" rx="1.48588" transform="rotate(90 981.999 336.886)" fill="#0D69D3" />
+    </g>
+  </g>
+</svg>

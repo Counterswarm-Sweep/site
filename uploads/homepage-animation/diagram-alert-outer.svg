@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="601" height="801" viewBox="588 40 601 801" fill="none">
+  <defs>
+    <radialGradient id="alert-outer-shade" cx="0" cy="0" r="10" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 6.95 -6.95 0 904.206 309.756)">
+      <stop offset="0.24717" stop-color="#D02245" stop-opacity="0" />
+      <stop offset="1" stop-color="#D02245" />
+    </radialGradient>
+  </defs>
+  <g transform="translate(0 323)">
+    <rect x="834.706" y="240.256" width="139" height="139" rx="7.35" fill="url(#alert-outer-shade)" opacity="0.2" />
+  </g>
+</svg>

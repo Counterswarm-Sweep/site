@@ -1,0 +1,8 @@
+
+:root{--brand-accent:#c82030;}
+#home-title .brand-accent{color:var(--brand-accent);}
+.site-header__brand-mark[data-astro-cid-ctg3m53h]{width:clamp(9.25rem,14vw,11.75rem);aspect-ratio:310/44;--site-header-wordmark-optical-offset:0%;color:var(--brand-accent);}
+.book-demo-chrome__wordmark{color:var(--brand-accent);width:11.75rem!important;aspect-ratio:310/44!important;}
+.site-footer__brand img[src="/logos/logo_small.svg"]{width:2.5rem;height:2.5rem;filter:none;}
+.vimeo-embed video{display:block;width:100%;height:100%;object-fit:cover;}
+.vimeo-embed__control[hidden]{display:none!important;}

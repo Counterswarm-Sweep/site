@@ -1,0 +1,1521 @@
+<!DOCTYPE html><html lang="en" style="--announcement-height: 0px" data-astro-cid-37fxchfa=""><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preload" href="/fonts/inter-latin-ext-wght-400-600.woff2" as="font" type="font/woff2" crossorigin=""><script src="/scripts/initialization/hash-navigation-15241d32.js"></script><link rel="icon" href="/logos/counterswarm-mark.svg" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/logos/counterswarm-mark.svg" sizes="180x180"><link rel="shortcut icon" href="/logos/counterswarm-mark.svg"><style>
+      body.marketing-tracking main :is(p, .lead, .rich-text):not(.hero__intro) {
+        letter-spacing: var(--letter-spacing-marketing-body);
+      }
+      body.marketing-tracking main :is(h1, h2, h3, h4, h5, h6),
+      body.marketing-tracking main :is(h1, h2, h3, h4, h5, h6) .text {
+        letter-spacing: var(--letter-spacing-marketing-heading);
+      }
+      body.product-page {
+        --font-size-rich-text-md: var(--font-size-text-sm);
+        --line-height-rich-text-md: 1.5;
+        --scroll-story-columns: minmax(0, 1fr) minmax(0, 1fr);
+        --scroll-story-title-size: var(--font-size-workflow-step);
+        --scroll-story-title-family: var(--font-body);
+        --scroll-story-title-leading: 1.3;
+        --scroll-story-title-weight: var(--font-weight-body);
+        --scroll-story-title-tracking: -0.02em;
+        --scroll-story-muted: var(--neutral-500);
+        --scroll-story-layout-gap: clamp(3rem, 5vw, 5rem);
+        --scroll-story-steps-align: center;
+        --scroll-story-step-padding: clamp(0.75rem, calc(6svh - 2rem), 1.75rem) 0;
+      }
+      @media (min-width: 960px) {
+        body.product-page {
+          --max-width-product-copy: 30rem;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="/styles/PageSections.css">
+    <link rel="stylesheet" href="/styles/BaseLayout.css">
+    <link rel="stylesheet" href="/styles/MarketingLandingLayout.css">
+    <style>
+      .split[data-astro-cid-wxnyy2up] {
+        display: grid;
+      }
+      .split--gap-md[data-astro-cid-wxnyy2up] {
+        gap: 1rem;
+      }
+      .split--gap-lg[data-astro-cid-wxnyy2up] {
+        gap: 2rem;
+      }
+      .split--gap-xl[data-astro-cid-wxnyy2up] {
+        gap: 3rem;
+      }
+      .split--align-start[data-astro-cid-wxnyy2up] {
+        align-items: start;
+      }
+      .split--align-center[data-astro-cid-wxnyy2up] {
+        align-items: center;
+      }
+      .split--align-end[data-astro-cid-wxnyy2up] {
+        align-items: end;
+      }
+      @media (min-width: 960px) {
+        .split--balanced[data-astro-cid-wxnyy2up] {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        }
+        .split--content-heavy[data-astro-cid-wxnyy2up] {
+          grid-template-columns: minmax(0, 1.08fr) minmax(18rem, 0.92fr);
+        }
+        .split--forty-sixty[data-astro-cid-wxnyy2up] {
+          grid-template-columns: minmax(0, 0.8fr) minmax(18rem, 1.2fr);
+        }
+        .split--visual-heavy[data-astro-cid-wxnyy2up] {
+          grid-template-columns: minmax(18rem, 0.92fr) minmax(0, 1.08fr);
+        }
+        .split--content-sidebar[data-astro-cid-wxnyy2up] {
+          grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.65fr);
+        }
+        .split--content-sidebar[data-astro-cid-wxnyy2up] > .split__aside[data-astro-cid-wxnyy2up] {
+          align-self: stretch;
+        }
+        .split--archive[data-astro-cid-wxnyy2up] {
+          grid-template-columns: minmax(4rem, 6rem) minmax(0, 1fr);
+        }
+        .split--reverse[data-astro-cid-wxnyy2up] > .split__main[data-astro-cid-wxnyy2up] {
+          order: 2;
+        }
+        .split--reverse[data-astro-cid-wxnyy2up] > .split__aside[data-astro-cid-wxnyy2up] {
+          order: 1;
+        }
+      }
+      @media (max-width: 959.98px) {
+        .split--reverse-mobile[data-astro-cid-wxnyy2up] > .split__main[data-astro-cid-wxnyy2up] {
+          order: 2;
+        }
+        .split--reverse-mobile[data-astro-cid-wxnyy2up] > .split__aside[data-astro-cid-wxnyy2up] {
+          order: 1;
+        }
+      }
+      .label--light[data-astro-cid-tl4ucbcc] {
+        --text-secondary: var(--ink-soft);
+      }
+      .label--dark[data-astro-cid-tl4ucbcc] {
+        --text-secondary: var(--ink-inverse-soft);
+      }
+      .lead--light[data-astro-cid-wiqmifno] {
+        --text-secondary: var(--ink-soft);
+      }
+      .lead--dark[data-astro-cid-wiqmifno] {
+        --text-secondary: var(--ink-inverse-soft);
+      }
+      .hero[data-astro-cid-bbe6dxrz] {
+        position: relative;
+      }
+      .hero--marketing[data-astro-cid-bbe6dxrz] {
+        --hero-copy-gap: 14px;
+        --hero-intro-color: var(--neutral-500);
+      }
+      .hero__background[data-astro-cid-bbe6dxrz] {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        pointer-events: none;
+      }
+      .hero--full[data-astro-cid-bbe6dxrz].hero--with-background .hero__background[data-astro-cid-bbe6dxrz] {
+        inset: auto 0;
+        top: clamp(-2.5rem, -5vw, -0.5rem);
+        height: clamp(28rem, 60%, 50rem);
+        max-height: min(52rem, 82vh);
+        overflow: hidden;
+        mask-image: linear-gradient(
+          to bottom,
+          transparent 0%,
+          rgba(0, 0, 0, 0.35) 7%,
+          #000 14%,
+          #000 96%,
+          transparent 100%
+        );
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          transparent 0%,
+          rgba(0, 0, 0, 0.35) 7%,
+          #000 14%,
+          #000 96%,
+          transparent 100%
+        );
+      }
+      .hero__visual[data-astro-cid-bbe6dxrz] {
+        display: grid;
+        place-items: center;
+        min-height: 18rem;
+      }
+      .hero--full[data-astro-cid-bbe6dxrz] .hero__content[data-astro-cid-bbe6dxrz] {
+        display: block;
+      }
+      .hero--full[data-astro-cid-bbe6dxrz] .display-title--hero {
+        --font-size-display-hero: var(--font-size-page-title);
+        --line-height-display-hero: var(--line-height-page-title);
+        letter-spacing: var(--letter-spacing-marketing-heading);
+      }
+      .hero__copy-stack[data-astro-cid-bbe6dxrz] {
+        gap: var(--hero-copy-gap, 9px);
+      }
+      .hero__intro-measure[data-astro-cid-bbe6dxrz] {
+        max-width: min(100%, var(--max-width-page-intro));
+      }
+      .hero[data-astro-cid-bbe6dxrz] .hero__intro {
+        font-size: var(--font-size-page-intro);
+        line-height: var(--line-height-page-intro);
+        letter-spacing: var(--letter-spacing-page-intro);
+        font-weight: var(--font-weight-body);
+        color: var(--hero-intro-color, var(--text-primary));
+      }
+      .hero[data-astro-cid-bbe6dxrz] .button {
+        margin-block-start: 18px;
+      }
+      .hero[data-astro-cid-bbe6dxrz] {
+        --button-font-size: 1rem;
+        --button-font-weight: var(--font-weight-ui);
+        --button-line-height: 1.5;
+        --button-tracking: var(--letter-spacing-marketing-body);
+        --button-padding-block: 9px;
+        --button-padding-inline: 17px;
+      }
+      .hero__content-inner[data-astro-cid-bbe6dxrz] {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+      .hero__actions-slot--centered[data-astro-cid-bbe6dxrz] {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      .hero__intro-actions-row[data-astro-cid-bbe6dxrz] {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 56rem);
+        align-items: center;
+        column-gap: clamp(0.75rem, 2.5vw, 1.75rem);
+        width: 100%;
+      }
+      .hero__intro-actions-row__text[data-astro-cid-bbe6dxrz] {
+        min-width: 0;
+      }
+      .hero__intro-actions-row__actions[data-astro-cid-bbe6dxrz] {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+        justify-self: end;
+      }
+      .hero__intro-actions-row__actions[data-astro-cid-bbe6dxrz] .measure {
+        max-width: none;
+        width: 100%;
+      }
+      .hero__intro-actions-row__actions[data-astro-cid-bbe6dxrz] .hero-form__cluster {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+      @media (max-width: 720px) {
+        .hero__intro-actions-row[data-astro-cid-bbe6dxrz] {
+          grid-template-columns: 1fr;
+          align-items: stretch;
+          row-gap: 1rem;
+        }
+        .hero__intro-actions-row__actions[data-astro-cid-bbe6dxrz] .hero-form__cluster {
+          max-width: 100%;
+        }
+      }
+      @media (min-width: 980px) {
+        .hero__visual[data-astro-cid-bbe6dxrz] {
+          min-height: 28rem;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="/styles/RichText.css">
+    <style>
+      .page-section-description__animated-title[data-astro-cid-pfcssf4l] {
+        color: var(--text-primary);
+      }
+      .page-section-description__animated-title-word[data-astro-cid-pfcssf4l] {
+        color: color-mix(in srgb, var(--text-primary) 18%, transparent);
+      }
+      [data-astro-cid-pfcssf4l][data-animated-section-description].is-visible
+        .page-section-description__animated-title-word[data-astro-cid-pfcssf4l] {
+        animation: page-section-description-title-ink 0.52s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        animation-delay: calc(var(--word-index) * 40ms);
+      }
+      @keyframes page-section-description-title-ink {
+        to {
+          color: var(--text-primary);
+        }
+      }
+      .page-section-description__animated-intro[data-astro-cid-pfcssf4l] {
+        color: var(--text-secondary);
+      }
+      .page-section-description__animated-intro-word[data-astro-cid-pfcssf4l] {
+        color: color-mix(in srgb, var(--text-secondary) 18%, transparent);
+      }
+      [data-astro-cid-pfcssf4l][data-animated-section-description].is-visible
+        .page-section-description__animated-intro-word[data-astro-cid-pfcssf4l] {
+        animation: page-section-description-intro-ink 0.52s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        animation-delay: calc(var(--word-index) * 40ms);
+      }
+      @keyframes page-section-description-intro-ink {
+        to {
+          color: var(--text-secondary);
+        }
+      }
+      .page-section-description__animated-lead[data-astro-cid-pfcssf4l] {
+        color: var(--text-primary);
+      }
+      .page-section-description__animated-lead-word[data-astro-cid-pfcssf4l] {
+        color: var(--text-secondary);
+      }
+      [data-astro-cid-pfcssf4l][data-animated-section-description].is-visible
+        .page-section-description__animated-lead-word[data-astro-cid-pfcssf4l] {
+        animation: page-section-description-lead-ink 0.52s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        animation-delay: calc(var(--word-index) * 40ms);
+      }
+      @keyframes page-section-description-lead-ink {
+        to {
+          color: var(--text-primary);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .page-section-description__animated-lead-word[data-astro-cid-pfcssf4l],
+        .page-section-description__animated-title-word[data-astro-cid-pfcssf4l] {
+          color: var(--text-primary);
+          animation: none;
+        }
+        .page-section-description__animated-intro-word[data-astro-cid-pfcssf4l] {
+          color: var(--text-secondary);
+          animation: none;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="/styles/ImagePanelSection.css">
+    <style>
+      .fade-swap[data-astro-cid-hphepofc] {
+        display: grid;
+      }
+      .fade-swap[data-astro-cid-hphepofc][data-enhanced="true"] > [data-fade-swap-panel] {
+        grid-area: 1 / 1;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .fade-swap[data-astro-cid-hphepofc][data-enhanced="true"] > [data-fade-swap-panel] {
+          transition: none;
+        }
+      }
+      .carousel-arrow[data-astro-cid-wppyapd6] {
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        width: 1.75rem;
+        height: 1.75rem;
+        padding: 0;
+        border: 0;
+        border-radius: 4px;
+        background: transparent;
+        color: inherit;
+        cursor: pointer;
+      }
+      .carousel-arrow[data-astro-cid-wppyapd6][data-direction="next"] {
+        background: var(--neutral-100);
+      }
+      .carousel-arrow[data-astro-cid-wppyapd6]:hover:not(:disabled) {
+        background: var(--neutral-200);
+      }
+      .carousel-arrow[data-astro-cid-wppyapd6]:disabled {
+        opacity: 0.35;
+        cursor: default;
+      }
+      @media (pointer: coarse) {
+        .carousel-arrow[data-astro-cid-wppyapd6] {
+          width: 2.75rem;
+          height: 2.75rem;
+        }
+      }
+      .quote-spotlight[data-astro-cid-dthf2ilz],
+      .quote-spotlight__blockquote[data-astro-cid-dthf2ilz] {
+        margin: 0;
+      }
+      .quote-spotlight__quote-body[data-astro-cid-dthf2ilz] {
+        position: relative;
+        font-family: var(--font-display);
+        font-weight: var(--font-weight-body);
+        font-size: clamp(1.28rem, 2.4vw, 1.72rem);
+        line-height: 1.38;
+        color: var(--text-secondary);
+      }
+      .quote-spotlight__quote-body[data-astro-cid-dthf2ilz] p {
+        margin: 0;
+      }
+      .quote-spotlight__quote-body[data-astro-cid-dthf2ilz] p + p {
+        margin-top: 0.65em;
+      }
+      .quote-spotlight__quote-body[data-astro-cid-dthf2ilz] strong {
+        color: var(--text-primary);
+        font-weight: var(--font-weight-display);
+      }
+      .quote-spotlight__author[data-astro-cid-dthf2ilz] {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+      }
+      .quote-spotlight__avatar[data-astro-cid-dthf2ilz] {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+      .quote-spotlight__attribution[data-astro-cid-dthf2ilz] {
+        margin: 0;
+        opacity: 0.92;
+        line-height: 1.5;
+      }
+      .quote-spotlight__logo[data-astro-cid-dthf2ilz] {
+        display: flex;
+        margin-top: 1.5rem;
+      }
+      .quote-spotlight__logo[data-astro-cid-dthf2ilz] img[data-astro-cid-dthf2ilz] {
+        height: 1.5rem;
+        width: auto;
+        filter: brightness(0);
+      }
+      .quote-spotlight--dark[data-astro-cid-dthf2ilz]
+        .quote-spotlight__logo[data-astro-cid-dthf2ilz]
+        img[data-astro-cid-dthf2ilz] {
+        filter: brightness(0) invert(1);
+      }
+      .quote-carousel[data-astro-cid-tlkxtf4b] {
+        --quote-carousel-measure: 46rem;
+      }
+      .quote-carousel__eyebrow[data-astro-cid-tlkxtf4b] {
+        margin: 0 0 32px;
+      }
+      .quote-carousel__stage[data-astro-cid-tlkxtf4b] {
+        max-width: var(--quote-carousel-measure);
+        min-height: clamp(10.5rem, 28vw, 17rem);
+        overflow: visible;
+      }
+      .quote-carousel__controls[data-astro-cid-tlkxtf4b] {
+        display: flex;
+        width: fit-content;
+        margin-top: 1.5rem;
+        gap: 0.5rem;
+      }
+      .quote-carousel__panel[data-astro-cid-tlkxtf4b] {
+        margin: 0;
+      }
+      .stack[data-astro-cid-bdabvoub] {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .stack[data-astro-cid-bdabvoub] > * {
+        min-width: 0;
+      }
+      .stack--none[data-astro-cid-bdabvoub] {
+        gap: 0;
+      }
+      .stack--xs[data-astro-cid-bdabvoub] {
+        gap: 0.45rem;
+      }
+      .stack--sm[data-astro-cid-bdabvoub] {
+        gap: 0.75rem;
+      }
+      .stack--md[data-astro-cid-bdabvoub] {
+        gap: 1rem;
+      }
+      .stack--lg[data-astro-cid-bdabvoub] {
+        gap: 1.5rem;
+      }
+      .stack--xl[data-astro-cid-bdabvoub] {
+        gap: 3rem;
+      }
+      .stack--product-content[data-astro-cid-bdabvoub] {
+        gap: clamp(3rem, 7.35vw, 7.9375rem);
+      }
+      .stack--section-content[data-astro-cid-bdabvoub] {
+        gap: var(--homepage-content-gap, clamp(3rem, 5vw, 5rem));
+      }
+      .stack--section-gap[data-astro-cid-bdabvoub] {
+        gap: var(--space-section-gap);
+      }
+      .stack--editorial-compact[data-astro-cid-bdabvoub] {
+        gap: clamp(4rem, 7vw, 7rem);
+      }
+      .stack--2xl[data-astro-cid-bdabvoub] {
+        gap: clamp(6rem, 11vw, 11rem);
+      }
+      .grid[data-astro-cid-2rmnt3h5] {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        min-width: 0;
+      }
+      .grid[data-astro-cid-2rmnt3h5] > * {
+        min-width: 0;
+      }
+      .grid--gap-sm[data-astro-cid-2rmnt3h5] {
+        gap: 0.75rem;
+      }
+      .grid--gap-md[data-astro-cid-2rmnt3h5] {
+        gap: 1rem;
+      }
+      .grid--gap-lg[data-astro-cid-2rmnt3h5] {
+        gap: 1.5rem;
+      }
+      .grid--gap-xl[data-astro-cid-2rmnt3h5] {
+        column-gap: clamp(0.875rem, 4.6vw, 4.25rem);
+        row-gap: clamp(2rem, 4.6vw, 4.25rem);
+      }
+      .grid--row-gap-lg[data-astro-cid-2rmnt3h5] {
+        row-gap: 1.5rem;
+      }
+      .grid--row-gap-2xl[data-astro-cid-2rmnt3h5] {
+        row-gap: 4rem;
+      }
+      @media (min-width: 760px) {
+        .grid--2[data-astro-cid-2rmnt3h5],
+        .grid--3[data-astro-cid-2rmnt3h5],
+        .grid--4[data-astro-cid-2rmnt3h5] {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (min-width: 1024px) {
+        .grid--3[data-astro-cid-2rmnt3h5] {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .grid--4[data-astro-cid-2rmnt3h5] {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+      .mark-canvas[data-astro-cid-au4e6rjl] {
+        display: block;
+        width: 100%;
+        height: 100%;
+        --mark-ink: var(--neutral-900);
+      }
+      .reveal[data-astro-cid-hbflo5iy] {
+        opacity: 0;
+        transform: translateY(1.5rem);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal[data-astro-cid-hbflo5iy].is-revealed {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal[data-astro-cid-hbflo5iy] {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+      @media (scripting: none) {
+        .reveal[data-astro-cid-hbflo5iy] {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+      .surface-card[data-astro-cid-rj463kdt] {
+        --text-primary: var(--ink-strong);
+        --text-secondary: var(--ink-soft);
+        --text-heading: var(--ink-strong);
+        --text-link: currentColor;
+        --text-accent-surface: var(--accent-soft);
+        border-radius: var(--radius-card);
+      }
+      .surface-card--radius-none[data-astro-cid-rj463kdt] {
+        border-radius: 0;
+      }
+      .surface-card--border-none[data-astro-cid-rj463kdt] {
+        border: none;
+      }
+      .surface-card--border-default[data-astro-cid-rj463kdt] {
+        border: 1px solid;
+      }
+      .surface-card--padding-sm[data-astro-cid-rj463kdt] {
+        padding: 1rem 1.15rem;
+      }
+      .surface-card--padding-md[data-astro-cid-rj463kdt] {
+        padding: 1.5rem;
+      }
+      .surface-card--padding-lg[data-astro-cid-rj463kdt] {
+        padding: 1.75rem;
+      }
+      .surface-card--padding-xl[data-astro-cid-rj463kdt] {
+        padding: 3rem;
+      }
+      .surface-card--light[data-astro-cid-rj463kdt].surface-card--default,
+      .surface-card--light[data-astro-cid-rj463kdt].surface-card--elevated {
+        border-color: var(--line-strong);
+        background: var(--surface-card);
+      }
+      .surface-card--light[data-astro-cid-rj463kdt].surface-card--elevated {
+        box-shadow: var(--shadow-panel);
+      }
+      .surface-card--light[data-astro-cid-rj463kdt].surface-card--subtle {
+        border-color: transparent;
+        background: var(--surface-card-subtle);
+      }
+      .surface-card--light[data-astro-cid-rj463kdt].surface-card--quiet {
+        border-color: transparent;
+        background: var(--surface-card);
+      }
+      .surface-card--dark[data-astro-cid-rj463kdt].surface-card--default {
+        border-color: var(--line-dark);
+        background: var(--surface-dark);
+        --text-primary: var(--ink-inverse);
+        --text-secondary: var(--ink-inverse-soft);
+        --text-heading: var(--ink-inverse);
+        --text-accent-surface: rgba(31, 124, 255, 0.16);
+        color: var(--text-primary);
+      }
+      .surface-card--dark[data-astro-cid-rj463kdt].surface-card--elevated {
+        border-color: var(--line-dark);
+        background:
+          radial-gradient(circle at 68% 118%, rgba(77, 65, 255, 0.46), transparent 28%),
+          radial-gradient(circle at 88% 104%, rgba(44, 39, 151, 0.28), transparent 34%),
+          radial-gradient(circle at 58% 92%, rgba(22, 20, 82, 0.2), transparent 42%),
+          linear-gradient(180deg, #080b15, #070914 58%, #06070f);
+        --text-primary: var(--ink-inverse);
+        --text-secondary: var(--ink-inverse-soft);
+        --text-heading: var(--ink-inverse);
+        --text-accent-surface: rgba(31, 124, 255, 0.16);
+        color: var(--text-primary);
+      }
+      .surface-card--dark[data-astro-cid-rj463kdt].surface-card--subtle {
+        border-color: transparent;
+        background: #272727;
+        --text-primary: var(--ink-inverse);
+        --text-secondary: var(--ink-inverse-soft);
+        --text-heading: var(--ink-inverse);
+        --text-accent-surface: rgba(31, 124, 255, 0.16);
+        color: var(--text-primary);
+      }
+      .surface-card--dark[data-astro-cid-rj463kdt].surface-card--quiet {
+        border-color: transparent;
+        background: var(--surface-dark-700);
+        --text-primary: var(--ink-inverse);
+        --text-secondary: var(--ink-inverse-soft);
+        --text-heading: var(--ink-inverse);
+        color: var(--text-primary);
+      }
+      .surface-card--interactive[data-astro-cid-rj463kdt] {
+        transition:
+          border-color 0.18s ease,
+          background-color 0.18s ease;
+      }
+      .form-field[data-astro-cid-v6br2s7v] {
+        display: grid;
+        gap: 0.2rem;
+      }
+    </style>
+    <link rel="stylesheet" href="/styles/TestimonialCard.css">
+    <style>
+      .vimeo-embed[data-astro-cid-bmbgcugm] {
+        display: block;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: var(--radius-card);
+        background: var(--surface-card-muted);
+        aspect-ratio: 16 / 9;
+      }
+      .vimeo-embed[data-astro-cid-bmbgcugm] iframe[data-astro-cid-bmbgcugm] {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      .vimeo-embed__controls[data-astro-cid-bmbgcugm] {
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        display: flex;
+        gap: 0.5rem;
+      }
+      .vimeo-embed__control[data-astro-cid-bmbgcugm] {
+        display: grid;
+        place-items: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        padding: 0;
+        border: 0;
+        border-radius: 999px;
+        color: #fff;
+        background: #0000008c;
+        backdrop-filter: blur(6px);
+        cursor: pointer;
+        transition: background-color 0.15s ease;
+      }
+      .vimeo-embed__control[data-astro-cid-bmbgcugm]:hover {
+        background: #000000bf;
+      }
+      .vimeo-embed__control[data-astro-cid-bmbgcugm]:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+      }
+      .vimeo-embed__control[data-astro-cid-bmbgcugm] svg[data-astro-cid-bmbgcugm] {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+      .vimeo-embed__control[data-astro-cid-bmbgcugm][data-state="playing"]
+        .vimeo-embed__icon--play[data-astro-cid-bmbgcugm],
+      .vimeo-embed__control[data-astro-cid-bmbgcugm][data-state="paused"]
+        .vimeo-embed__icon--pause[data-astro-cid-bmbgcugm],
+      .vimeo-embed__control[data-astro-cid-bmbgcugm][data-state="muted"]
+        .vimeo-embed__icon--unmuted[data-astro-cid-bmbgcugm],
+      .vimeo-embed__control[data-astro-cid-bmbgcugm][data-state="unmuted"]
+        .vimeo-embed__icon--muted[data-astro-cid-bmbgcugm] {
+        display: none;
+      }
+      @media (max-width: 640px) {
+        .vimeo-embed__controls[data-astro-cid-bmbgcugm] {
+          left: 0.75rem;
+          bottom: 0.75rem;
+        }
+      }
+      .select-field-wrap[data-astro-cid-kmd7lpqq] {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-width: 0;
+        color: var(--field-placeholder, rgba(22, 22, 21, 0.42));
+      }
+      .select-field[data-astro-cid-kmd7lpqq] {
+        display: block;
+        width: 100%;
+        min-height: 2.85rem;
+        padding: 0.7rem 2.75rem 0.7rem 1rem;
+        border: 1px solid;
+        border-radius: 8px;
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: none;
+        outline: none;
+        box-shadow: none;
+        transition:
+          border-color 0.16s ease,
+          background-color 0.16s ease,
+          box-shadow 0.16s ease,
+          color 0.16s ease;
+        border-color: var(--field-border, var(--line-strong));
+        background: var(--field-bg, var(--surface-card));
+        color: var(--field-color, var(--ink-strong));
+      }
+      .select-field[data-astro-cid-kmd7lpqq]:focus-visible {
+        box-shadow: var(--field-focus-ring, 0 0 0 3px var(--accent-soft));
+      }
+      .select-field[data-astro-cid-kmd7lpqq]:has(option[value=""]:checked) {
+        color: var(--field-placeholder, rgba(22, 22, 21, 0.42));
+      }
+      .select-field__icon[data-astro-cid-kmd7lpqq] {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+      .text-field[data-astro-cid-qowytyq3] {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        min-height: 2.85rem;
+        padding: 0.7rem 1rem;
+        border: 1px solid;
+        border-radius: 8px;
+        -webkit-appearance: none;
+        appearance: none;
+        outline: none;
+        box-shadow: none;
+        transition:
+          border-color 0.16s ease,
+          background-color 0.16s ease,
+          box-shadow 0.16s ease;
+        border-color: var(--field-border, var(--line-strong));
+        background: var(--field-bg, var(--surface-card));
+        color: var(--field-color, var(--ink-strong));
+      }
+      .text-field[data-astro-cid-qowytyq3]::placeholder {
+        color: var(--field-placeholder, rgba(22, 22, 21, 0.42));
+      }
+      .text-field[data-astro-cid-qowytyq3]:focus-visible {
+        box-shadow: var(--field-focus-ring, 0 0 0 3px var(--accent-soft));
+      }
+    </style>
+    
+    <style>
+      .text-area-field[data-astro-cid-5ghbjx2m] {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        padding: 0.8rem 1rem;
+        border: 1px solid;
+        border-radius: 8px;
+        -webkit-appearance: none;
+        appearance: none;
+        outline: none;
+        box-shadow: none;
+        resize: vertical;
+        transition:
+          border-color 0.16s ease,
+          background-color 0.16s ease,
+          box-shadow 0.16s ease;
+        border-color: var(--field-border, var(--line-strong));
+        background: var(--field-bg, var(--surface-card));
+        color: var(--field-color, var(--ink-strong));
+      }
+      .text-area-field[data-astro-cid-5ghbjx2m]::placeholder {
+        color: var(--field-placeholder, rgba(22, 22, 21, 0.42));
+      }
+      .text-area-field[data-astro-cid-5ghbjx2m]:focus-visible {
+        box-shadow: var(--field-focus-ring, 0 0 0 3px var(--accent-soft));
+      }
+      .rolling-number[data-astro-cid-s6uzz34t] {
+        display: inline-flex;
+        align-items: flex-start;
+        line-height: 1;
+        vertical-align: bottom;
+        font-family: var(--font-display-serif);
+        font-weight: var(--font-weight-display-serif);
+        font-variant-numeric: tabular-nums;
+      }
+      .rolling-number__static[data-astro-cid-s6uzz34t] {
+        display: block;
+        height: 1em;
+        line-height: 1;
+      }
+      .rolling-number__mask[data-astro-cid-s6uzz34t] {
+        display: inline-block;
+        overflow: hidden;
+        height: 1em;
+        line-height: 1;
+      }
+      .rolling-number__track[data-astro-cid-s6uzz34t] {
+        display: flex;
+        flex-direction: column;
+        transform: translateY(calc(-1em * (var(--rolling-steps) - 1)));
+        transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+        will-change: transform;
+      }
+      .rolling-number__item[data-astro-cid-s6uzz34t] {
+        display: block;
+        height: 1em;
+        line-height: 1;
+        white-space: nowrap;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .rolling-number__track[data-astro-cid-s6uzz34t] {
+          transition: none;
+        }
+      }
+      .proof-stats[data-astro-cid-lprscjwh] {
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp(2.5rem, 7vw, 5rem);
+        margin: 0;
+      }
+      .proof-stat[data-astro-cid-lprscjwh] {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+      .proof-stat__value[data-astro-cid-lprscjwh] {
+        margin: 0;
+        color: var(--ink-strong);
+      }
+      [data-astro-cid-lprscjwh][data-layout="band"] .proof-stat__value[data-astro-cid-lprscjwh] {
+        font-size: clamp(2.75rem, 5vw, 4.4rem);
+        font-family: var(--font-display-serif);
+        font-weight: var(--font-weight-display-serif);
+        font-variant-numeric: tabular-nums;
+        line-height: 1;
+      }
+      .proof-stat__label[data-astro-cid-lprscjwh] {
+        margin: 0;
+      }
+      .proof-stats[data-astro-cid-lprscjwh][data-layout="stacked"] {
+        display: grid;
+        gap: 5.4375rem;
+        padding-top: 0.625rem;
+      }
+      [data-astro-cid-lprscjwh][data-layout="stacked"] .proof-stat[data-astro-cid-lprscjwh] {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 16.125rem);
+        align-items: start;
+        gap: 1.5rem;
+        border-top: 1px solid var(--neutral-300);
+        padding-top: 1.25rem;
+        min-height: 8rem;
+        box-sizing: border-box;
+      }
+      [data-astro-cid-lprscjwh][data-layout="stacked"] .proof-stat__value[data-astro-cid-lprscjwh] {
+        --font-display-serif: var(--font-body);
+        --font-weight-display-serif: var(--font-weight-body);
+        padding-top: 0.375rem;
+      }
+      @media (max-width: 900px) {
+        .proof-stats[data-astro-cid-lprscjwh][data-layout="stacked"] {
+          gap: 2rem;
+          padding-top: 0;
+        }
+        [data-astro-cid-lprscjwh][data-layout="stacked"] .proof-stat[data-astro-cid-lprscjwh] {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+        }
+      }
+      @media (max-width: 620px) {
+        [data-astro-cid-lprscjwh][data-layout="band"] .proof-stat__value[data-astro-cid-lprscjwh] {
+          font-size: clamp(3.75rem, 17vw, 5rem);
+        }
+      }
+      .research-proof-summary[data-astro-cid-xbrttnip] {
+        display: grid;
+        grid-template-columns: minmax(0, 40%) minmax(0, 50%);
+        justify-content: space-between;
+        align-items: start;
+        gap: 0;
+      }
+      .research-proof-summary__title[data-astro-cid-xbrttnip] {
+        max-width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .research-proof-summary__title[data-astro-cid-xbrttnip] > span[data-astro-cid-xbrttnip] {
+        color: var(--neutral-500);
+      }
+      @media (max-width: 959px) {
+        .research-proof-summary[data-astro-cid-xbrttnip] {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 2.5rem;
+        }
+      }
+    </style><title>Counterswarm Code Security</title><meta name="description" content="Find code vulnerabilities scanners were never built to see."><meta name="robots" content="index, follow, max-image-preview:large"><link rel="canonical" href="https://counterswarm.si/code/"><meta property="og:title" content="Counterswarm Code Security"><meta property="og:description" content="Find code vulnerabilities scanners were never built to see."><meta property="og:type" content="website"><meta property="og:url" content="https://counterswarm.si/code/"><meta property="og:site_name" content="Counterswarm"><meta property="og:image" content="https://counterswarm.si/images/counterswarm-social.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Counterswarm — Continuous AI Defence against AI Attacks"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Counterswarm Code Security"><meta name="twitter:description" content="Find code vulnerabilities scanners were never built to see."><meta name="twitter:image" content="https://counterswarm.si/images/counterswarm-social.png"><meta name="twitter:image:alt" content="Counterswarm — Continuous AI Defence against AI Attacks"><meta name="google-site-verification" content="kIjHCVmIr7iEO1oZzarDtn5sOn23jI_y-7J6AuDCclw"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://counterswarm.si/#organization","name":"Counterswarm","url":"https://counterswarm.si/","logo":"https://counterswarm.si/logos/counterswarm-mark.svg"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://counterswarm.si/"},{"@type":"ListItem","position":2,"name":"Counterswarm Code Security","item":"https://counterswarm.si/code/"}]}]}</script><link rel="stylesheet" href="/styles/brand.css"></head>
+  <body class="marketing-tracking product-page" style="--max-width: var(--max-width-marketing)" data-astro-cid-37fxchfa="">
+    <header class="site-header" data-site-header="" data-theme="light" data-surface="page" data-page-scrolled="false" data-scrolled="false" data-navigation-hidden="false" data-mobile-menu-open="false" data-desktop-dropdown-open="false" data-astro-cid-ctg3m53h="">
+  <div class="site-header__desktop" data-astro-cid-ctg3m53h="">
+    <div class="site-header__desktop-bar" data-astro-cid-ctg3m53h="">
+      <a class="site-header__brand" href="/" aria-label="Counterswarm" data-astro-cid-ctg3m53h="">
+        <span class="site-header__brand-mark" aria-hidden="true" data-astro-cid-ctg3m53h="">
+          <span class="site-header__logo-wordmark" data-astro-cid-ctg3m53h=""></span>
+          <span class="site-header__logo-glyph" data-astro-cid-ctg3m53h=""></span>
+        </span>
+        <span class="visually-hidden" data-astro-cid-ctg3m53h="">Counterswarm</span>
+      </a>
+      <nav class="site-header__desktop-nav" aria-label="Primary" data-astro-cid-ctg3m53h="">
+        <button class="site-header__link site-header__dropdown-trigger" type="button" data-header-dropdown-trigger="use-cases" aria-expanded="false" aria-controls="site-header-panel-use-cases" aria-haspopup="true" data-astro-cid-ctg3m53h="">
+          <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--xs text--family-body text--regular site-header__nav-label">
+            Product
+          </span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="site-header__chevron" aria-hidden="true" data-astro-cid-ctg3m53h="true">
+            <path d="M0.53125 0.530273L4.53125 4.53027L8.53125 0.530273" stroke="currentColor" stroke-width="1.5"></path>
+          </svg> </button><a class="site-header__link" href="/research/" data-astro-cid-ctg3m53h="">
+          <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--xs text--family-body text--regular site-header__nav-label">
+            Research
+          </span> </a><a data-astro-cid-ctg3m53h="" href="/blog/" class="site-header__link">
+          <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--xs text--family-body text--regular site-header__nav-label">Blog</span>
+          
+        </a>
+      </nav>
+      <div class="site-header__desktop-actions" data-astro-cid-ctg3m53h="">
+        <span class="site-header__request-demo-shell site-header__request-demo-shell--desktop" data-astro-cid-ctg3m53h="">
+          <a href="https://calendly.com/muzecmo/yourgm-intro" data-demo-booking="" data-astro-cid-ctg3m53h="true" data-astro-cid-vnzlvqnm="true" class="button button--primary button--sm site-header__action site-header__action--primary site-header__request-demo site-header__request-demo--desktop">
+            Get started
+          </a>
+        </span>
+      </div>
+    </div>
+    <div class="header-mega-menu" id="site-header-panel-use-cases" data-header-dropdown-panel="use-cases" aria-label="Product" hidden="" data-astro-cid-etvpeqvs="">
+      <div data-header-theme="light" data-header-surface="page" data-spacing-tone="light" data-astro-cid-etvpeqvs="true" data-astro-cid-sh445jdo="true" class="section section--transparent section--none header-mega-menu__section">
+        <div data-astro-cid-sh445jdo="true" data-astro-cid-dm6k5sok="true" class="container container--default section__inner">
+          <div data-astro-cid-etvpeqvs="true" data-astro-cid-sptvla6t="true" class="cluster cluster--md cluster--column cluster--align-start cluster--justify-start cluster--wrap">
+            <div class="header-mega-menu-link-list" style="
+                --header-mega-menu-row-count: 3;
+                --header-mega-menu-column-count: 2;
+                --header-mega-menu-list-max-width: 100%;
+              " role="list" data-astro-cid-ynh6a3gs="">
+              <div role="listitem" data-astro-cid-ynh6a3gs="">
+                <a class="header-mega-menu-link-list__link" href="/platform/" data-astro-cid-ynh6a3gs="">
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--medium">
+                    Platform
+                  </span>
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--regular header-mega-menu-link-list__description">
+                    Your autonomous security command center
+                  </span>
+                </a> </div><div role="listitem" data-astro-cid-ynh6a3gs="">
+                <a class="header-mega-menu-link-list__link" href="/code/" data-astro-cid-ynh6a3gs="">
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--medium">
+                    Code
+                  </span>
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--regular header-mega-menu-link-list__description">
+                    Find vulnerabilities scanners were never built to see
+                  </span>
+                </a> </div><div role="listitem" data-astro-cid-ynh6a3gs="">
+                <a class="header-mega-menu-link-list__link" href="/supply-chain/" data-astro-cid-ynh6a3gs="">
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--medium">
+                    Supply chain
+                  </span>
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--regular header-mega-menu-link-list__description">
+                    Know what's reachable, not just what's present
+                  </span>
+                </a> </div><div role="listitem" data-astro-cid-ynh6a3gs="">
+                <a class="header-mega-menu-link-list__link" href="/secrets/" data-astro-cid-ynh6a3gs="">
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--medium">
+                    Secrets
+                  </span>
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--regular header-mega-menu-link-list__description">
+                    Stop leaks before they leave the repo
+                  </span>
+                </a> </div><div role="listitem" data-astro-cid-ynh6a3gs="">
+                <a class="header-mega-menu-link-list__link" href="/agentic-pentesting/" data-astro-cid-ynh6a3gs="">
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--medium">
+                    Agentic Pentesting
+                  </span>
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--regular header-mega-menu-link-list__description">
+                    Find vulnerabilities in code that's already running
+                  </span>
+                </a> </div><div role="listitem" data-astro-cid-ynh6a3gs="">
+                <a class="header-mega-menu-link-list__link" href="/dependency-firewall/" data-astro-cid-ynh6a3gs="">
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--medium">
+                    Dependency Firewall
+                  </span>
+                  <span data-astro-cid-ynh6a3gs="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--regular header-mega-menu-link-list__description">
+                    Detect malicious behavior before it spreads through your environment
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> </div>
+  </div>
+  <div class="site-header__mobile-bar" data-astro-cid-ctg3m53h="">
+    <a class="site-header__brand" href="/" aria-label="Counterswarm" data-astro-cid-ctg3m53h="">
+      <span class="site-header__brand-mark" aria-hidden="true" data-astro-cid-ctg3m53h="">
+        <span class="site-header__logo-wordmark" data-astro-cid-ctg3m53h=""></span>
+        <span class="site-header__logo-glyph" data-astro-cid-ctg3m53h=""></span>
+      </span>
+      <span class="visually-hidden" data-astro-cid-ctg3m53h="">Counterswarm</span>
+    </a>
+    <button class="site-header__mobile-toggle" type="button" aria-expanded="false" aria-controls="site-header-mobile-nav" data-mobile-nav-toggle="" data-astro-cid-ctg3m53h="">
+      <span class="site-header__menu-icon" aria-hidden="true" data-astro-cid-ctg3m53h=""></span>
+      <span class="visually-hidden" data-mobile-nav-toggle-label="" data-astro-cid-ctg3m53h="">Open navigation</span>
+    </button>
+  </div>
+  <div class="site-header__mobile-overlay" data-mobile-nav-overlay="" hidden="" data-astro-cid-ctg3m53h="">
+    <nav class="site-header__mobile-nav" id="site-header-mobile-nav" aria-label="Primary" data-astro-cid-ctg3m53h="">
+      <div class="site-header__mobile-group" data-astro-cid-ctg3m53h="">
+        <button class="site-header__mobile-group-toggle" type="button" data-mobile-dropdown-toggle="use-cases" aria-expanded="false" aria-controls="site-header-mobile-panel-use-cases" data-astro-cid-ctg3m53h="">
+          <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--display-nav text--family-display text--semibold">
+            Product
+          </span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="site-header__chevron" aria-hidden="true" data-astro-cid-ctg3m53h="true">
+            <path d="M0.53125 0.530273L4.53125 4.53027L8.53125 0.530273" stroke="currentColor" stroke-width="1.5"></path>
+          </svg>
+        </button>
+        <div class="site-header__mobile-group-panel" id="site-header-mobile-panel-use-cases" data-mobile-dropdown-panel="use-cases" hidden="" data-astro-cid-ctg3m53h="">
+          <div class="site-header__mobile-group-links" data-astro-cid-ctg3m53h="">
+            <a href="/platform/" data-mobile-nav-close="" data-astro-cid-ctg3m53h="">
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--semibold site-header__mobile-group-label">
+                Platform
+              </span>
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--regular site-header__mobile-group-description">
+                Your autonomous security command center
+              </span> </a><a href="/code/" data-mobile-nav-close="" data-astro-cid-ctg3m53h="">
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--semibold site-header__mobile-group-label">
+                Code
+              </span>
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--regular site-header__mobile-group-description">
+                Find vulnerabilities scanners were never built to see
+              </span> </a><a href="/supply-chain/" data-mobile-nav-close="" data-astro-cid-ctg3m53h="">
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--semibold site-header__mobile-group-label">
+                Supply chain
+              </span>
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--regular site-header__mobile-group-description">
+                Know what's reachable, not just what's present
+              </span> </a><a href="/secrets/" data-mobile-nav-close="" data-astro-cid-ctg3m53h="">
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--semibold site-header__mobile-group-label">
+                Secrets
+              </span>
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--regular site-header__mobile-group-description">
+                Stop leaks before they leave the repo
+              </span> </a><a href="/agentic-pentesting/" data-mobile-nav-close="" data-astro-cid-ctg3m53h="">
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--semibold site-header__mobile-group-label">
+                Agentic Pentesting
+              </span>
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--regular site-header__mobile-group-description">
+                Find vulnerabilities in code that's already running
+              </span> </a><a href="/dependency-firewall/" data-mobile-nav-close="" data-astro-cid-ctg3m53h="">
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--semibold site-header__mobile-group-label">
+                Dependency Firewall
+              </span>
+              <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--sm text--family-body text--regular site-header__mobile-group-description">
+                Detect malicious behavior before it spreads through your environment
+              </span>
+            </a>
+          </div>
+        </div> </div><a class="site-header__mobile-link" href="/research/" data-mobile-nav-close="" data-astro-cid-ctg3m53h="">
+        <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--display-nav text--family-display text--semibold">
+          Research
+        </span> </a><a data-astro-cid-ctg3m53h="" href="/blog/" class="site-header__mobile-link" data-mobile-nav-close="">
+          <span data-astro-cid-ctg3m53h="true" data-astro-cid-z2jvtqdt="true" class="text text--inherit text--display-nav text--family-display text--semibold">Blog</span>
+          
+        </a>
+    </nav>
+    <div class="site-header__mobile-actions" data-astro-cid-ctg3m53h="">
+      <span class="site-header__request-demo-shell site-header__request-demo-shell--mobile" data-astro-cid-ctg3m53h="">
+        <a href="https://calendly.com/muzecmo/yourgm-intro" data-demo-booking="" data-mobile-nav-close="true" data-astro-cid-ctg3m53h="true" data-astro-cid-vnzlvqnm="true" class="button button--primary button--md site-header__action site-header__action--primary site-header__request-demo site-header__request-demo--mobile">
+          Get started
+        </a>
+      </span>
+    </div>
+  </div>
+</header>
+
+    <div class="header-offset" data-header-theme="light" data-header-surface="page" data-reserve-space="true" aria-hidden="true" data-astro-cid-ctg3m53h=""></div>
+    <style>
+      .header-offset[data-header-surface="page"] {
+        background-color: var(--surface-page);
+      }
+
+      .site-header[data-surface="page"] {
+        --site-header-active-surface: var(--surface-page);
+      }
+
+      .header-offset[data-header-surface="light-300"] {
+        background-color: var(--surface-light-300);
+      }
+
+      .site-header[data-surface="light-300"] {
+        --site-header-active-surface: var(--surface-light-300);
+      }
+
+      .header-offset[data-header-surface="light-blue"] {
+        background-color: var(--surface-light-blue);
+      }
+
+      .site-header[data-surface="light-blue"] {
+        --site-header-active-surface: var(--surface-light-blue);
+      }
+
+      .header-offset[data-header-surface="dark"] {
+        background-color: var(--surface-dark);
+      }
+
+      .site-header[data-surface="dark"] {
+        --site-header-active-surface: var(--surface-dark);
+      }
+
+      .header-offset[data-header-surface="dark-700"] {
+        background-color: var(--surface-dark-700);
+      }
+
+      .site-header[data-surface="dark-700"] {
+        --site-header-active-surface: var(--surface-dark-700);
+      }
+
+      .header-offset[data-header-surface="dark-800"] {
+        background-color: var(--surface-dark-800);
+      }
+
+      .site-header[data-surface="dark-800"] {
+        --site-header-active-surface: var(--surface-dark-800);
+      }
+
+      .header-offset[data-header-surface="dark-900"] {
+        background-color: var(--surface-dark-900);
+      }
+
+      .site-header[data-surface="dark-900"] {
+        --site-header-active-surface: var(--surface-dark-900);
+      }
+
+      .header-offset[data-header-surface="dark-blue"] {
+        background-color: var(--surface-dark-blue);
+      }
+
+      .site-header[data-surface="dark-blue"] {
+        --site-header-active-surface: var(--surface-dark-blue);
+      }
+
+      .header-offset[data-header-surface="dark-elevated"] {
+        background-color: var(--surface-dark-elevated);
+      }
+
+      .site-header[data-surface="dark-elevated"] {
+        --site-header-active-surface: var(--surface-dark-elevated);
+      }
+
+      .header-offset[data-header-surface="transparent"] {
+        background-color: var(--surface-page);
+      }
+
+      .site-header[data-surface="transparent"] {
+        --site-header-active-surface: var(--surface-page);
+      }
+    </style>
+    <script type="module" src="/_astro/SiteHeader.astro_astro_type_script_index_0_lang.CGroQ0Gj.js"></script>
+    <main data-astro-cid-37fxchfa="">
+      <script type="module" src="/scripts/interactions/interaction-a38d3231.js"></script><section data-header-theme="light" data-header-surface="page" data-spacing-tone="light" data-collapse-padding="true" data-astro-cid-eqrwmcup="true" data-astro-cid-sh445jdo="true" class="section section--page section--page-header">
+  <div data-astro-cid-sh445jdo="true" data-astro-cid-dm6k5sok="true" class="container container--default section__inner">
+    <div class="hero hero--full hero--marketing" data-astro-cid-bbe6dxrz="">
+      <div class="hero__content" data-astro-cid-bbe6dxrz="">
+        <div class="hero__content-inner" data-astro-cid-bbe6dxrz="">
+          <div data-astro-cid-bbe6dxrz="true" data-astro-cid-bdabvoub="true" class="stack stack--lg hero__copy-stack">
+            <h1 data-astro-cid-bbe6dxrz="true" data-astro-cid-p72ha3xh="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--display-hero text--family-display text--medium display-title display-title--columns-1 display-title--hero display-title--default">Code</h1>
+            <div data-astro-cid-bbe6dxrz="true" data-astro-cid-jvnigumd="true" class="measure measure--prose measure--text-align-left hero__intro-measure">
+              <p data-astro-cid-bbe6dxrz="true" data-astro-cid-wiqmifno="true" data-astro-cid-z2jvtqdt="true" class="text text--secondary text--lg text--family-body text--medium lead lead--light hero__intro">
+                We understand your code like a Security Engineer, tracing business logic, mapping
+                cross-service data flows, and surfacing real vulnerabilities, fixing them autonomously.
+              </p> </div><div data-astro-cid-eqrwmcup="true" data-astro-cid-sptvla6t="true" class="cluster cluster--sm cluster--row cluster--align-center cluster--justify-start cluster--wrap">
+              <a href="https://calendly.com/muzecmo/yourgm-intro" data-demo-booking="" showarrow="true" data-astro-cid-eqrwmcup="true" data-astro-cid-vnzlvqnm="true" class="button button--primary button--md">
+                Get started
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="marketing-landing-hero-media" data-astro-cid-eqrwmcup="">
+      <img src="/illustrations/platform-9c74124f.svg" alt="Counterswarm security across your stack workflow illustration" class="marketing-landing-hero-media__asset" loading="eager" decoding="async" data-astro-cid-eqrwmcup="true"> </div><div class="marketing-landing-hero-logos" data-astro-cid-eqrwmcup="">
+      
+    </div>
+  </div>
+</section>
+<script type="module" src="/scripts/interactions/interaction-1892400a.js"></script><section id="page-section-imageGrid-1" data-header-theme="light" data-header-surface="page" data-spacing-tone="light" data-collapse-padding="true" data-astro-cid-z2woioyt="true" data-astro-cid-sh445jdo="true" class="section section--page section--default">
+  <div data-astro-cid-sh445jdo="true" data-astro-cid-dm6k5sok="true" class="container container--default section__inner">
+    <div data-astro-cid-z2woioyt="true" data-astro-cid-bdabvoub="true" class="stack stack--product-content">
+      <h2 data-astro-cid-pfcssf4l="true" data-astro-cid-jvnigumd="true" class="measure measure--four-fifths measure--text-align-left">
+        <span data-astro-cid-pfcssf4l="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--section-lead text--family-body text--medium">
+          <span data-astro-cid-pfcssf4l="true">Detect what pattern-matching misses</span>
+        </span>
+      </h2>
+      <div class="grid grid--3 grid--gap-lg" data-astro-cid-z2woioyt="true" data-astro-cid-2rmnt3h5="">
+        <article data-astro-cid-z2woioyt="true" data-astro-cid-i43rm5v3="true" data-astro-cid-rj463kdt="true" class="surface-card surface-card--light surface-card--subtle surface-card--padding-md surface-card--border-none surface-card--radius-default feature-card image-grid__feature">
+          <div data-astro-cid-z2woioyt="true" data-astro-cid-bdabvoub="true" class="stack stack--xs">
+            <h3 data-astro-cid-z2woioyt="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--ml text--family-body text--medium">
+              <span data-astro-cid-z2woioyt="true">Stop unauthorized access before it ships</span> </h3><div data-astro-cid-z2woioyt="true" data-astro-cid-z2jvtqdt="true" class="text text--muted-emphasis text--sm text--family-body text--regular text--leading-normal image-grid__feature-body">
+              <div data-astro-cid-z2woioyt="true"><p>Counterswarm catches broken authorization, privilege escalation, IDOR, and subscription tier
+                  bypasses by reasoning about what your code is supposed to do</p></div>
+            </div>
+          </div>
+          <img src="/illustrations/code-9387cc81.svg" alt="Counterswarm find and fix code risks workflow illustration" class="image-grid__illustration" loading="lazy" decoding="async" data-astro-cid-z2woioyt="true"> </article><article data-astro-cid-z2woioyt="true" data-astro-cid-i43rm5v3="true" data-astro-cid-rj463kdt="true" class="surface-card surface-card--light surface-card--subtle surface-card--padding-md surface-card--border-none surface-card--radius-default feature-card image-grid__feature">
+          <div data-astro-cid-z2woioyt="true" data-astro-cid-bdabvoub="true" class="stack stack--xs">
+            <h3 data-astro-cid-z2woioyt="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--ml text--family-body text--medium">
+              <span data-astro-cid-z2woioyt="true">Eliminate cross-service blind spots</span> </h3><div data-astro-cid-z2woioyt="true" data-astro-cid-z2jvtqdt="true" class="text text--muted-emphasis text--sm text--family-body text--regular text--leading-normal image-grid__feature-body">
+              <div data-astro-cid-z2woioyt="true"><p>Counterswarm maps data flows across service boundaries, exposing attack paths that only exist
+                  between components—where an input in one service reaches a vulnerable sink in another.</p></div>
+            </div>
+          </div>
+          <img src="/illustrations/code-af832563.svg" alt="Counterswarm find and fix code risks workflow illustration" class="image-grid__illustration" loading="lazy" decoding="async" data-astro-cid-z2woioyt="true"> </article><article data-astro-cid-z2woioyt="true" data-astro-cid-i43rm5v3="true" data-astro-cid-rj463kdt="true" class="surface-card surface-card--light surface-card--subtle surface-card--padding-md surface-card--border-none surface-card--radius-default feature-card image-grid__feature">
+          <div data-astro-cid-z2woioyt="true" data-astro-cid-bdabvoub="true" class="stack stack--xs">
+            <h3 data-astro-cid-z2woioyt="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--ml text--family-body text--medium">
+              <span data-astro-cid-z2woioyt="true">Surface critical attack chains from low-severity noise</span> </h3><div data-astro-cid-z2woioyt="true" data-astro-cid-z2jvtqdt="true" class="text text--muted-emphasis text--sm text--family-body text--regular text--leading-normal image-grid__feature-body">
+              <div data-astro-cid-z2woioyt="true"><p>Counterswarm connects individual low-severity findings into exploitable paths by mapping how
+                  weak points chain together through your application’s data flows and control logic.</p></div>
+            </div>
+          </div>
+          <img src="/illustrations/code-c2e566e9.svg" alt="Counterswarm find and fix code risks workflow illustration" class="image-grid__illustration" loading="lazy" decoding="async" data-astro-cid-z2woioyt="true">
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="module" src="/scripts/interactions/video-controls-650fc4f9.js"></script><section id="page-section-alternatingPanels-2" data-header-theme="light" data-header-surface="page" data-spacing-tone="light" data-astro-cid-xazfbdtc="true" data-astro-cid-sh445jdo="true" class="section section--page section--default alternating-panels-section--balanced">
+  <div data-astro-cid-sh445jdo="true" data-astro-cid-dm6k5sok="true" class="container container--default section__inner">
+    <div data-astro-cid-xazfbdtc="true" data-astro-cid-bdabvoub="true" class="stack stack--product-content alternating-panels">
+      <h2 data-astro-cid-pfcssf4l="true" data-astro-cid-jvnigumd="true" class="measure measure--four-fifths measure--text-align-left">
+        <span data-astro-cid-pfcssf4l="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--section-lead text--family-body text--medium">
+          <span data-astro-cid-pfcssf4l="true">How Counterswarm secures your code</span>
+        </span>
+      </h2>
+      <div data-astro-cid-xazfbdtc="true" data-astro-cid-bdabvoub="true" class="stack stack--xl alternating-panels__items">
+        <div class="split split--balanced split--gap-xl split--align-center alternating-panels__row" data-astro-cid-xazfbdtc="true" data-astro-cid-wxnyy2up="">
+          <div class="split__main" data-astro-cid-wxnyy2up="">
+            <div data-astro-cid-xazfbdtc="true" data-astro-cid-jvnigumd="true" class="measure measure--md measure--text-align-left alternating-panels__copy">
+              <div data-astro-cid-xazfbdtc="true" data-astro-cid-bdabvoub="true" class="stack stack--sm">
+                <h3 data-astro-cid-xazfbdtc="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium">
+                  <span data-astro-cid-xazfbdtc="true">Find vulnerabilities hidden in your systems logic</span> </h3><div class="rich-text--secondary rich-text rich-text--auto rich-text--md alternating-panels__body" data-astro-cid-xazfbdtc="true" data-astro-cid-cbxl6bdj="">
+                  <div data-astro-cid-xazfbdtc="true"><p>Surface broken authorization, privilege escalation, and logic flaws by analyzing data
+                      flow, service interactions, and runtime behavior across your codebase.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="split__aside" data-astro-cid-wxnyy2up="">
+            <div class="alternating-panels__image-card" data-astro-cid-xazfbdtc="">
+              <img src="/illustrations/code-4adce869.svg" alt="Counterswarm find and fix code risks workflow illustration" class="alternating-panels__image" loading="lazy" decoding="async" data-astro-cid-xazfbdtc="true">
+            </div>
+          </div> </div><div class="split split--balanced split--gap-xl split--align-center split--reverse alternating-panels__row" data-astro-cid-xazfbdtc="true" data-astro-cid-wxnyy2up="">
+          <div class="split__main" data-astro-cid-wxnyy2up="">
+            <div data-astro-cid-xazfbdtc="true" data-astro-cid-jvnigumd="true" class="measure measure--md measure--text-align-left alternating-panels__copy">
+              <div data-astro-cid-xazfbdtc="true" data-astro-cid-bdabvoub="true" class="stack stack--sm">
+                <h3 data-astro-cid-xazfbdtc="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium">
+                  <span data-astro-cid-xazfbdtc="true">Prove which vulnerabilities attackers can exploit</span> </h3><div class="rich-text--secondary rich-text rich-text--auto rich-text--md alternating-panels__body" data-astro-cid-xazfbdtc="true" data-astro-cid-cbxl6bdj="">
+                  <div data-astro-cid-xazfbdtc="true"><p>Reduce triage noise with evidence trails and exploitation conditions. When scoped runtime testing is enabled and configured, supported checks can test findings against your application.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="split__aside" data-astro-cid-wxnyy2up="">
+            <div class="alternating-panels__image-card" data-astro-cid-xazfbdtc="">
+              <img src="/illustrations/code-3390c8dc.svg" alt="Counterswarm find and fix code risks workflow illustration" class="alternating-panels__image" loading="lazy" decoding="async" data-astro-cid-xazfbdtc="true">
+            </div>
+          </div> </div><div class="split split--balanced split--gap-xl split--align-center alternating-panels__row" data-astro-cid-xazfbdtc="true" data-astro-cid-wxnyy2up="">
+          <div class="split__main" data-astro-cid-wxnyy2up="">
+            <div data-astro-cid-xazfbdtc="true" data-astro-cid-jvnigumd="true" class="measure measure--md measure--text-align-left alternating-panels__copy">
+              <div data-astro-cid-xazfbdtc="true" data-astro-cid-bdabvoub="true" class="stack stack--sm">
+                <h3 data-astro-cid-xazfbdtc="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium">
+                  <span data-astro-cid-xazfbdtc="true">Generate fixes that match your codebase</span> </h3><div class="rich-text--secondary rich-text rich-text--auto rich-text--md alternating-panels__body" data-astro-cid-xazfbdtc="true" data-astro-cid-cbxl6bdj="">
+                  <div data-astro-cid-xazfbdtc="true"><p>Ship fixes faster with pull request comments that match your conventions. Developers
+                      review and merge without context-switching or manual remediation.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="split__aside" data-astro-cid-wxnyy2up="">
+            <div class="alternating-panels__image-card" data-astro-cid-xazfbdtc="">
+              <img src="/illustrations/code-dbf230e1.svg" alt="Counterswarm find and fix code risks workflow illustration" class="alternating-panels__image" loading="lazy" decoding="async" data-astro-cid-xazfbdtc="true">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="page-section-capabilitiesGrid-3" data-header-theme="light" data-header-surface="page" data-spacing-tone="light" data-astro-cid-262bpof4="true" data-astro-cid-sh445jdo="true" class="section section--page section--default capabilities-section--minimal capabilities-section--rows">
+  <div data-astro-cid-sh445jdo="true" data-astro-cid-dm6k5sok="true" class="container container--default section__inner">
+    <div class="split split--balanced split--gap-xl split--align-start divided-rows" data-astro-cid-esxet74m="true" data-astro-cid-wxnyy2up="">
+      <div class="split__main" data-astro-cid-wxnyy2up="">
+        <h2 data-astro-cid-pfcssf4l="true" data-astro-cid-jvnigumd="true" class="measure measure--two-fifths measure--text-align-left">
+          <span data-astro-cid-pfcssf4l="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--section-lead text--family-body text--medium">
+            <span data-astro-cid-pfcssf4l="true">Designed for flexibility</span>
+          </span>
+        </h2>
+      </div>
+      <div class="split__aside" data-astro-cid-wxnyy2up="">
+        <div slot="aside" data-astro-cid-esxet74m="true" data-astro-cid-bdabvoub="true" class="stack stack--none divided-rows__items">
+          <article class="divided-rows__item" data-has-body="true" data-astro-cid-esxet74m="">
+            <h3 data-astro-cid-esxet74m="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium">
+              <span data-astro-cid-esxet74m="true">Deep scans</span>
+            </h3>
+            <div class="rich-text--primary rich-text rich-text--auto rich-text--sm" data-astro-cid-esxet74m="true" data-astro-cid-cbxl6bdj="">
+              <div data-astro-cid-esxet74m="true"><p>Analyze your entire codebase to surface the full landscape of vulnerabilities.</p></div>
+            </div> </article><article class="divided-rows__item" data-has-body="true" data-astro-cid-esxet74m="">
+            <h3 data-astro-cid-esxet74m="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium">
+              <span data-astro-cid-esxet74m="true">PR scans</span>
+            </h3>
+            <div class="rich-text--primary rich-text rich-text--auto rich-text--sm" data-astro-cid-esxet74m="true" data-astro-cid-cbxl6bdj="">
+              <div data-astro-cid-esxet74m="true"><p>Review connected code changes and surface potential vulnerabilities with supporting evidence.</p></div>
+            </div> </article><article class="divided-rows__item" data-has-body="true" data-astro-cid-esxet74m="">
+            <h3 data-astro-cid-esxet74m="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium">
+              <span data-astro-cid-esxet74m="true">Source control native</span>
+            </h3>
+            <div class="rich-text--primary rich-text rich-text--auto rich-text--sm" data-astro-cid-esxet74m="true" data-astro-cid-cbxl6bdj="">
+              <div data-astro-cid-esxet74m="true"><p>Findings surface as PR comments with one-click access to full context and generated
+                  fixes.</p></div>
+            </div> </article><article class="divided-rows__item" data-has-body="true" data-astro-cid-esxet74m="">
+            <h3 data-astro-cid-esxet74m="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium">
+              <span data-astro-cid-esxet74m="true">Developer feedback</span>
+            </h3>
+            <div class="rich-text--primary rich-text rich-text--auto rich-text--sm" data-astro-cid-esxet74m="true" data-astro-cid-cbxl6bdj="">
+              <div data-astro-cid-esxet74m="true"><p>Review findings and record feedback to guide future triage.</p></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="product-suite" data-header-theme="light" data-header-surface="page" data-spacing-tone="light" data-astro-cid-owhpw4qi="true" data-astro-cid-sh445jdo="true" class="section section--page section--default product-stack-section">
+  <div data-astro-cid-sh445jdo="true" data-astro-cid-dm6k5sok="true" class="container container--default section__inner">
+    <div class="product-stack__texture" aria-hidden="true" style="background-image: url(&quot;/uploads/home-design/explore-products-background.webp&quot;)" data-astro-cid-owhpw4qi=""></div><div class="product-stack" data-astro-cid-owhpw4qi="">
+      <div data-astro-cid-owhpw4qi="true" data-astro-cid-jvnigumd="true" class="measure measure--four-fifths measure--text-align-left product-stack__intro">
+        <h2 data-astro-cid-owhpw4qi="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--section-lead text--family-body text--medium">
+          <span data-astro-cid-owhpw4qi="true">Explore products</span>
+        </h2>
+      </div>
+      <div class="product-stack__cards" style="--stack-count: 4" data-astro-cid-owhpw4qi="">
+        <ol class="product-stack__products" data-astro-cid-owhpw4qi="">
+          <li class="product-stack__layer" style="--stack-index: 0; --stack-order: 1" data-astro-cid-owhpw4qi="">
+            <a href="/dependency-firewall/" aria-label="Explore Dependency Firewall" data-astro-cid-owhpw4qi="true" data-astro-cid-rj463kdt="true" class="surface-card surface-card--light surface-card--subtle surface-card--padding-lg surface-card--border-default surface-card--radius-default product-stack__card">
+              <h3 data-astro-cid-owhpw4qi="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium product-stack__title">
+                <span data-astro-cid-owhpw4qi="true">Dependency Firewall</span>
+              </h3>
+              <div class="product-stack__content" data-astro-cid-owhpw4qi="">
+                <div class="rich-text--secondary rich-text rich-text--auto rich-text--sm product-stack__copy" data-astro-cid-owhpw4qi="true" data-astro-cid-cbxl6bdj="">
+                  <span data-astro-cid-owhpw4qi="true"><p>Detect malicious behavior before it spreads through your environment.</p></span>
+                </div>
+              </div>
+              <div class="product-stack__artwork" data-product="/dependency-firewall" aria-hidden="true" data-astro-cid-owhpw4qi="">
+                <img src="/illustrations/firewall-845b8bea.svg" alt="Counterswarm review package risk workflow illustration" class="product-stack__fallback" loading="lazy" decoding="async" data-astro-cid-owhpw4qi="true">
+              </div>
+            </a> </li><li class="product-stack__layer" style="--stack-index: 1; --stack-order: 2" data-astro-cid-owhpw4qi="">
+            <a href="/agentic-pentesting/" aria-label="Explore Agentic Pentesting" data-astro-cid-owhpw4qi="true" data-astro-cid-rj463kdt="true" class="surface-card surface-card--light surface-card--subtle surface-card--padding-lg surface-card--border-default surface-card--radius-default product-stack__card">
+              <h3 data-astro-cid-owhpw4qi="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium product-stack__title">
+                <span data-astro-cid-owhpw4qi="true">Agentic Pentesting</span>
+              </h3>
+              <div class="product-stack__content" data-astro-cid-owhpw4qi="">
+                <div class="rich-text--secondary rich-text rich-text--auto rich-text--sm product-stack__copy" data-astro-cid-owhpw4qi="true" data-astro-cid-cbxl6bdj="">
+                  <span data-astro-cid-owhpw4qi="true"><p>Confirm which vulnerabilities are exploitable by testing your running application with
+                      real attack paths.</p></span>
+                </div>
+                <div class="product-stack__replacement" data-astro-cid-owhpw4qi="">
+                  <h4 data-astro-cid-owhpw4qi="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--medium">
+                    Replacing Manual pentesting, Traditional DAST
+                  </h4>
+                  <div class="rich-text--secondary rich-text rich-text--auto rich-text--sm" data-astro-cid-owhpw4qi="true" data-astro-cid-cbxl6bdj="">
+                    <span data-astro-cid-owhpw4qi="true"><p>Counterswarm tests your running applications and automatically re-tests fixes at runtime after every merge.</p></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-stack__artwork" data-product="/agentic-pentesting" aria-hidden="true" data-astro-cid-owhpw4qi="">
+                <img src="/illustrations/pentesting-2d744f8d.svg" alt="Counterswarm validate fixes after every merge workflow illustration" class="product-stack__fallback" loading="lazy" decoding="async" data-astro-cid-owhpw4qi="true">
+              </div>
+            </a> </li><li class="product-stack__layer" style="--stack-index: 2; --stack-order: 3" data-astro-cid-owhpw4qi="">
+            <a href="/supply-chain/" aria-label="Explore Supply Chain" data-astro-cid-owhpw4qi="true" data-astro-cid-rj463kdt="true" class="surface-card surface-card--light surface-card--subtle surface-card--padding-lg surface-card--border-default surface-card--radius-default product-stack__card">
+              <h3 data-astro-cid-owhpw4qi="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium product-stack__title">
+                <span data-astro-cid-owhpw4qi="true">Supply Chain</span>
+              </h3>
+              <div class="product-stack__content" data-astro-cid-owhpw4qi="">
+                <div class="rich-text--secondary rich-text rich-text--auto rich-text--sm product-stack__copy" data-astro-cid-owhpw4qi="true" data-astro-cid-cbxl6bdj="">
+                  <span data-astro-cid-owhpw4qi="true"><p>Prioritize dependency risk using package versions, advisories, and available usage evidence.</p></span>
+                </div>
+                <div class="product-stack__replacement" data-astro-cid-owhpw4qi="">
+                  <h4 data-astro-cid-owhpw4qi="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--medium">
+                    Replacing Traditional Static SCA
+                  </h4>
+                  <div class="rich-text--secondary rich-text rich-text--auto rich-text--sm" data-astro-cid-owhpw4qi="true" data-astro-cid-cbxl6bdj="">
+                    <span data-astro-cid-owhpw4qi="true"><p>Counterswarm uses dependency versions and import evidence to help prioritize vulnerabilities relevant to your application.</p></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-stack__artwork" data-product="/supply-chain" aria-hidden="true" data-astro-cid-owhpw4qi="">
+                <img src="/illustrations/supply-0e0286bd.svg" alt="Counterswarm understand your dependency risk workflow illustration" class="product-stack__fallback" loading="lazy" decoding="async" data-astro-cid-owhpw4qi="true">
+              </div>
+            </a> </li><li class="product-stack__layer" style="--stack-index: 3; --stack-order: 4" data-astro-cid-owhpw4qi="">
+            <a href="/secrets/" aria-label="Explore Secrets &amp; Sensitive Data" data-astro-cid-owhpw4qi="true" data-astro-cid-rj463kdt="true" class="surface-card surface-card--light surface-card--subtle surface-card--padding-lg surface-card--border-default surface-card--radius-default product-stack__card">
+              <h3 data-astro-cid-owhpw4qi="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--lg text--family-body text--medium product-stack__title">
+                <span data-astro-cid-owhpw4qi="true">Secrets &amp; Sensitive Data</span>
+              </h3>
+              <div class="product-stack__content" data-astro-cid-owhpw4qi="">
+                <div class="rich-text--secondary rich-text rich-text--auto rich-text--sm product-stack__copy" data-astro-cid-owhpw4qi="true" data-astro-cid-cbxl6bdj="">
+                  <span data-astro-cid-owhpw4qi="true"><p>Detect and validate credentials across your codebase, CI/CD pipelines, and runtime
+                      environments.</p></span>
+                </div>
+              </div>
+              <div class="product-stack__artwork" data-product="/secrets" aria-hidden="true" data-astro-cid-owhpw4qi="">
+                <img src="/illustrations/secrets-b6774de8.svg" alt="Counterswarm find exposed credentials in context workflow illustration" class="product-stack__fallback" loading="lazy" decoding="async" data-astro-cid-owhpw4qi="true">
+              </div>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <script type="module" src="/scripts/interactions/motif-reveal-42999378.js"></script><section data-header-theme="dark" data-header-surface="dark-900" data-spacing-tone="dark" aria-label="Get started" data-site-footer-demo-anchor="true" data-astro-cid-37fxchfa="true" data-astro-cid-z42i2aqv="true" data-astro-cid-sh445jdo="true" class="section section--dark-900 section--none site-footer-cta">
+      <div data-astro-cid-sh445jdo="true" data-astro-cid-dm6k5sok="true" class="container container--default section__inner">
+        <div class="site-footer-cta__shell" data-astro-cid-z42i2aqv="">
+          <div class="site-footer-cta__inner" data-astro-cid-z42i2aqv="">
+            <div class="motif-frame site-footer-cta__headline" data-motif-frame="" data-motif-ready="false" data-astro-cid-z42i2aqv="true" data-astro-cid-xp257fqc="">
+              <h2 data-motif-title="true" data-astro-cid-z42i2aqv="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--display-section text--family-body text--medium site-footer-cta__title">
+                <span data-astro-cid-z42i2aqv="">Secure on Counterswarm</span>
+              </h2>
+            </div>
+            <div data-astro-cid-z42i2aqv="true" data-astro-cid-jvnigumd="true" class="measure measure--xl measure--text-align-center">
+              <div data-astro-cid-z42i2aqv="true" data-astro-cid-sptvla6t="true" class="cluster cluster--md cluster--row cluster--align-center cluster--justify-center site-footer-cta__row">
+                <a href="https://calendly.com/muzecmo/yourgm-intro" data-demo-booking="" data-astro-cid-z42i2aqv="true" data-astro-cid-vnzlvqnm="true" class="button button--primary button--md">
+                  Get started
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> </section><footer data-header-theme="dark" data-header-surface="dark-900" data-spacing-tone="dark" data-astro-cid-gcn2mc3v="true" data-astro-cid-sh445jdo="true" class="section section--dark-900 section--compact site-footer">
+      <div data-astro-cid-sh445jdo="true" data-astro-cid-dm6k5sok="true" class="container container--default section__inner">
+        <div class="site-footer__layout" data-astro-cid-gcn2mc3v="">
+          <div class="site-footer__brand" data-astro-cid-gcn2mc3v="">
+            <div data-astro-cid-gcn2mc3v=""><img src="/logos/logo_small.svg" alt="Counterswarm logo" data-astro-cid-gcn2mc3v=""></div>
+            
+          </div>
+          <div data-astro-cid-gcn2mc3v="true" data-astro-cid-sptvla6t="true" class="cluster cluster--xl cluster--row cluster--align-start cluster--justify-start cluster--wrap site-footer__links">
+            <div class="link-list link-list--dark" data-astro-cid-gcn2mc3v="true" data-astro-cid-pgtcdogx="">
+              <p data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular link-list__heading">
+                Product
+              </p>
+              <div data-astro-cid-pgtcdogx="true" data-astro-cid-sptvla6t="true" class="cluster cluster--sm cluster--column cluster--align-start cluster--justify-start cluster--wrap link-list__links">
+                <div data-astro-cid-pgtcdogx="">
+                  <a href="/platform/" data-astro-cid-pgtcdogx="">
+                    <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                      Platform
+                    </span>
+                  </a> </div><div data-astro-cid-pgtcdogx="">
+                  <a href="/code/" data-astro-cid-pgtcdogx="">
+                    <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                      Code
+                    </span>
+                  </a> </div><div data-astro-cid-pgtcdogx="">
+                  <a href="/supply-chain/" data-astro-cid-pgtcdogx="">
+                    <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                      Supply chain
+                    </span>
+                  </a> </div><div data-astro-cid-pgtcdogx="">
+                  <a href="/secrets/" data-astro-cid-pgtcdogx="">
+                    <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                      Secrets
+                    </span>
+                  </a> </div><div data-astro-cid-pgtcdogx="">
+                  <a href="/agentic-pentesting/" data-astro-cid-pgtcdogx="">
+                    <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                      Agentic Pentesting
+                    </span>
+                  </a> </div><div data-astro-cid-pgtcdogx="">
+                  <a href="/dependency-firewall/" data-astro-cid-pgtcdogx="">
+                    <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                      Dependency Firewall
+                    </span>
+                  </a>
+                </div>
+              </div> </div><div class="link-list link-list--dark" data-astro-cid-gcn2mc3v="true" data-astro-cid-pgtcdogx="">
+              <p data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular link-list__heading">
+                Resources
+              </p>
+              <div data-astro-cid-pgtcdogx="true" data-astro-cid-sptvla6t="true" class="cluster cluster--sm cluster--column cluster--align-start cluster--justify-start cluster--wrap link-list__links">
+                <div data-astro-cid-pgtcdogx="">
+                   </div><div data-astro-cid-pgtcdogx="">
+                  <a href="/blog/" data-astro-cid-pgtcdogx="">
+                    <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                      Blog
+                    </span>
+                  </a> </div><div data-astro-cid-pgtcdogx="">
+                  <a href="/research/" data-astro-cid-pgtcdogx="">
+                    <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                      Research
+                    </span>
+                  </a> </div><div data-astro-cid-pgtcdogx="">
+                  <a href="https://calendly.com/muzecmo/yourgm-intro" data-demo-booking="" data-astro-cid-pgtcdogx="">
+                    <span data-astro-cid-pgtcdogx="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--xs text--family-body text--regular">
+                      Book a demo
+                    </span>
+                  </a> </div><div data-astro-cid-pgtcdogx="">
+                  
+                </div>
+              </div> </div>
+          </div>
+        </div>
+        <div class="site-footer__bottom" data-astro-cid-gcn2mc3v="">
+          <div class="site-footer__bottom-left" data-astro-cid-gcn2mc3v="">
+            <span class="site-footer__copyright" data-astro-cid-gcn2mc3v="">© 2026 Counterswarm</span>
+            <a href="/legal/privacy-policy/" data-astro-cid-gcn2mc3v="">Privacy Policy</a>
+            <a href="/legal/terms-conditions/" data-astro-cid-gcn2mc3v="">Terms of Service</a>
+            <a href="/legal/terms-conditions/" data-astro-cid-gcn2mc3v="">Terms &amp; Conditions</a>
+          </div>
+          <div class="site-footer__bottom-right" data-astro-cid-gcn2mc3v="">
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/scripts/conversion.js"></script>
+</body></html>

@@ -1,0 +1,151 @@
+{
+  "verifiedOn": "2026-11-02",
+  "license": "SIL Open Font License 1.1",
+  "fonts": [
+    {
+      "fontPath": "/fonts/inter-latin-ext-wght-400-600.woff2",
+      "sha256": "16d14655e399a643dc0a2531ecbc5971a05687a34fff8221ecc2dd7cd62e9f98",
+      "family": [
+        "Inter"
+      ],
+      "style": [
+        "Regular"
+      ],
+      "version": [
+        "Version 4.001;git-66647c0bb"
+      ],
+      "copyright": [
+        "Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)"
+      ],
+      "embeddedLicense": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+      ],
+      "embeddedLicenseURL": [
+        "https://openfontlicense.org"
+      ],
+      "unicodeCodepoints": 918,
+      "glyphs": 1731,
+      "axes": [
+        {
+          "tag": "opsz",
+          "minimum": 14.0,
+          "default": 14.0,
+          "maximum": 32.0
+        },
+        {
+          "tag": "wght",
+          "minimum": 400.0,
+          "default": 400.0,
+          "maximum": 600.0
+        }
+      ],
+      "noticePath": "/licenses/Inter-OFL.txt",
+      "noticeSHA256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+      "upstreamLicenseSource": "https://github.com/rsms/inter/blob/66647c0bbbe41a850d79d9c76fb13add3378940f/LICENSE.txt"
+    },
+    {
+      "fontPath": "/fonts/inter-latin-ext-italic-wght-400-600.woff2",
+      "sha256": "5dc2ab813303066c82f3b834d1578e89e2e0e21cddd11a4fb9c2f26c88c90dc6",
+      "family": [
+        "Inter"
+      ],
+      "style": [
+        "Italic"
+      ],
+      "version": [
+        "Version 4.001;git-66647c0bb"
+      ],
+      "copyright": [
+        "Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)"
+      ],
+      "embeddedLicense": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+      ],
+      "embeddedLicenseURL": [
+        "https://openfontlicense.org"
+      ],
+      "unicodeCodepoints": 918,
+      "glyphs": 1693,
+      "axes": [
+        {
+          "tag": "opsz",
+          "minimum": 14.0,
+          "default": 14.0,
+          "maximum": 32.0
+        },
+        {
+          "tag": "wght",
+          "minimum": 400.0,
+          "default": 400.0,
+          "maximum": 600.0
+        }
+      ],
+      "noticePath": "/licenses/Inter-OFL.txt",
+      "noticeSHA256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+      "upstreamLicenseSource": "https://github.com/rsms/inter/blob/66647c0bbbe41a850d79d9c76fb13add3378940f/LICENSE.txt"
+    },
+    {
+      "fontPath": "/fonts/geist-mono-latin-ext-wght-400-600.woff2",
+      "sha256": "1ed82bf811bacf0d1dd01319e708c4afe61f98f347b35c45b1cb4531bb5cbc83",
+      "family": [
+        "Geist Mono"
+      ],
+      "style": [
+        "Regular"
+      ],
+      "version": [
+        "Version 1.401"
+      ],
+      "copyright": [
+        "Copyright 2024 The Geist Project Authors (https://github.com/vercel/geist-font.git)"
+      ],
+      "embeddedLicense": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+      ],
+      "embeddedLicenseURL": [
+        "https://openfontlicense.org"
+      ],
+      "unicodeCodepoints": 382,
+      "glyphs": 607,
+      "axes": [
+        {
+          "tag": "wght",
+          "minimum": 400.0,
+          "default": 400.0,
+          "maximum": 600.0
+        }
+      ],
+      "noticePath": "/licenses/Geist-Mono-OFL.txt",
+      "noticeSHA256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f",
+      "upstreamLicenseSource": "https://github.com/google/fonts/blob/main/ofl/geistmono/OFL.txt"
+    },
+    {
+      "fontPath": "/fonts/jersey-10-quotes.woff2",
+      "sha256": "ada09c742a6440dfaf95c300a53ccf6d688e28d57eec71d337fce70d5e9b7239",
+      "family": [
+        "Jersey 10"
+      ],
+      "style": [
+        "Regular"
+      ],
+      "version": [
+        "Version 1.001; ttfautohint (v1.8.4.7-5d5b)"
+      ],
+      "copyright": [
+        "Copyright 2023 The Soft Type Project Authors (https://github.com/scfried/soft-type-jersey)"
+      ],
+      "embeddedLicense": [
+        "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+      ],
+      "embeddedLicenseURL": [
+        "https://openfontlicense.org"
+      ],
+      "unicodeCodepoints": 4,
+      "glyphs": 5,
+      "axes": [],
+      "noticePath": "/licenses/Jersey-10-OFL.txt",
+      "noticeSHA256": "436d5836064cec796c7ddde6fb4faeabdb6f2f17443a24a30d0c38b75d13f922",
+      "upstreamLicenseSource": "https://github.com/google/fonts/blob/main/ofl/jersey10/OFL.txt"
+    }
+  ]
+}

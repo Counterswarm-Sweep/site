@@ -1,0 +1,646 @@
+<!DOCTYPE html><html lang="en" style="--announcement-height: 0px" data-astro-cid-37fxchfa=""><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preload" href="/fonts/inter-latin-ext-wght-400-600.woff2" as="font" type="font/woff2" crossorigin=""><script src="/scripts/initialization/hash-navigation-15241d32.js"></script><link rel="icon" href="/logos/counterswarm-mark.svg" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/logos/counterswarm-mark.svg" sizes="180x180"><link rel="shortcut icon" href="/logos/counterswarm-mark.svg"><link rel="stylesheet" href="/styles/BaseLayout.css">
+    <style>
+      .split[data-astro-cid-wxnyy2up] {
+        display: grid;
+      }
+      .split--gap-md[data-astro-cid-wxnyy2up] {
+        gap: 1rem;
+      }
+      .split--gap-lg[data-astro-cid-wxnyy2up] {
+        gap: 2rem;
+      }
+      .split--gap-xl[data-astro-cid-wxnyy2up] {
+        gap: 3rem;
+      }
+      .split--align-start[data-astro-cid-wxnyy2up] {
+        align-items: start;
+      }
+      .split--align-center[data-astro-cid-wxnyy2up] {
+        align-items: center;
+      }
+      .split--align-end[data-astro-cid-wxnyy2up] {
+        align-items: end;
+      }
+      @media (min-width: 960px) {
+        .split--balanced[data-astro-cid-wxnyy2up] {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        }
+        .split--content-heavy[data-astro-cid-wxnyy2up] {
+          grid-template-columns: minmax(0, 1.08fr) minmax(18rem, 0.92fr);
+        }
+        .split--forty-sixty[data-astro-cid-wxnyy2up] {
+          grid-template-columns: minmax(0, 0.8fr) minmax(18rem, 1.2fr);
+        }
+        .split--visual-heavy[data-astro-cid-wxnyy2up] {
+          grid-template-columns: minmax(18rem, 0.92fr) minmax(0, 1.08fr);
+        }
+        .split--content-sidebar[data-astro-cid-wxnyy2up] {
+          grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.65fr);
+        }
+        .split--content-sidebar[data-astro-cid-wxnyy2up] > .split__aside[data-astro-cid-wxnyy2up] {
+          align-self: stretch;
+        }
+        .split--archive[data-astro-cid-wxnyy2up] {
+          grid-template-columns: minmax(4rem, 6rem) minmax(0, 1fr);
+        }
+        .split--reverse[data-astro-cid-wxnyy2up] > .split__main[data-astro-cid-wxnyy2up] {
+          order: 2;
+        }
+        .split--reverse[data-astro-cid-wxnyy2up] > .split__aside[data-astro-cid-wxnyy2up] {
+          order: 1;
+        }
+      }
+      @media (max-width: 959.98px) {
+        .split--reverse-mobile[data-astro-cid-wxnyy2up] > .split__main[data-astro-cid-wxnyy2up] {
+          order: 2;
+        }
+        .split--reverse-mobile[data-astro-cid-wxnyy2up] > .split__aside[data-astro-cid-wxnyy2up] {
+          order: 1;
+        }
+      }
+      .eyebrow-button[data-astro-cid-yy2qkjhx] {
+        --eyebrow-button-fg: var(--accent-violet);
+        --eyebrow-button-bg: color-mix(in srgb, var(--accent-violet) 10%, transparent);
+        --eyebrow-button-hover-bg: color-mix(in srgb, var(--accent-violet) 16%, transparent);
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        gap: 0.5rem;
+        padding: 0.45rem 0.7rem 0.45rem 0.78rem;
+        border: 0;
+        border-radius: var(--radius-pill);
+        color: var(--eyebrow-button-fg);
+        background: var(--eyebrow-button-bg);
+        font-family: var(--font-body);
+        font-size: var(--font-size-text-xs);
+        font-weight: var(--font-weight-ui);
+        line-height: 1;
+        text-decoration: none;
+        transition:
+          background-color 0.16s ease,
+          border-color 0.16s ease,
+          color 0.16s ease;
+      }
+      .eyebrow-button--dark[data-astro-cid-yy2qkjhx] {
+        --eyebrow-button-fg: color-mix(in srgb, var(--accent-violet) 34%, var(--ink-inverse) 66%);
+        --eyebrow-button-bg: color-mix(in srgb, var(--accent-violet) 22%, transparent);
+        --eyebrow-button-hover-bg: color-mix(in srgb, var(--accent-violet) 32%, transparent);
+      }
+      a[data-astro-cid-yy2qkjhx].eyebrow-button:hover {
+        background: var(--eyebrow-button-hover-bg);
+      }
+      .eyebrow-button[data-astro-cid-yy2qkjhx][hidden] {
+        display: none;
+      }
+      a[data-astro-cid-yy2qkjhx].eyebrow-button:focus-visible {
+        outline: 2px solid color-mix(in srgb, var(--accent-violet) 70%, transparent);
+        outline-offset: 3px;
+      }
+      html[data-book-demo-state="success"] [data-astro-cid-fyiebb7s][data-book-demo-panel="form"] {
+        display: none;
+      }
+      html:not([data-book-demo-state="success"]) [data-astro-cid-fyiebb7s][data-book-demo-panel="success"] {
+        display: none;
+      }
+      .book-demo-chrome[data-astro-cid-fyiebb7s] {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 50;
+        color: var(--ink-strong);
+      }
+      .book-demo-chrome__inner[data-astro-cid-fyiebb7s] {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        min-height: var(--header-height);
+        padding-block: 8px;
+      }
+      .book-demo-chrome__brand[data-astro-cid-fyiebb7s] {
+        display: inline-flex;
+        align-items: center;
+        flex-shrink: 0;
+        color: inherit;
+      }
+      .book-demo-chrome__wordmark[data-astro-cid-fyiebb7s] {
+        display: block;
+        width: clamp(5rem, 10vw, 6.25rem);
+        aspect-ratio: 821 / 165;
+        background-color: currentColor;
+        mask-image: url(/logos/logo-wordmark.svg);
+        mask-repeat: no-repeat;
+        mask-position: left center;
+        mask-size: contain;
+        -webkit-mask-image: url(/logos/logo-wordmark.svg);
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: left center;
+        -webkit-mask-size: contain;
+      }
+      .book-demo-section[data-astro-cid-fyiebb7s] {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        padding: calc(var(--header-height) + clamp(1rem, 4vh, 4rem)) 0 clamp(1.5rem, 4vh, 4rem);
+      }
+      .demo-panel[data-astro-cid-fyiebb7s] {
+        width: 100%;
+      }
+      .demo-subheader--campaign[data-astro-cid-fyiebb7s]:not([hidden]) {
+        display: grid;
+        gap: 0.875rem;
+      }
+      .demo-form[data-astro-cid-fyiebb7s] {
+        display: grid;
+        gap: 1.25rem;
+      }
+      .demo-success[data-astro-cid-fyiebb7s] {
+        min-height: 100%;
+      }
+      .book-demo-viewport[data-astro-cid-fyiebb7s] {
+        display: flex;
+        flex-direction: column;
+        min-height: 100svh;
+      }
+      .book-demo-logo-section[data-astro-cid-fyiebb7s] {
+        --customer-logo-row-gap: clamp(1rem, 3vh, 3rem);
+        padding-block: 0 clamp(1.5rem, 4vh, 3rem);
+        background: var(--surface-page);
+      }
+      @media (min-width: 961px) and (max-height: 760px) {
+        .demo-form[data-astro-cid-fyiebb7s] {
+          gap: 1rem;
+        }
+      }
+      @media (max-width: 960px) {
+        .book-demo-logo-section[data-astro-cid-fyiebb7s] .customer-logo-grid__cell:nth-child(n + 7) {
+          display: none;
+        }
+      }
+      @media (max-width: 760px) {
+        .book-demo-chrome[data-astro-cid-fyiebb7s] {
+          position: absolute;
+        }
+      }
+      @media (min-width: 760px) {
+        .demo-form__field--full[data-astro-cid-fyiebb7s] {
+          grid-column: 1 / -1;
+        }
+      }
+      .stack[data-astro-cid-bdabvoub] {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .stack[data-astro-cid-bdabvoub] > * {
+        min-width: 0;
+      }
+      .stack--none[data-astro-cid-bdabvoub] {
+        gap: 0;
+      }
+      .stack--xs[data-astro-cid-bdabvoub] {
+        gap: 0.45rem;
+      }
+      .stack--sm[data-astro-cid-bdabvoub] {
+        gap: 0.75rem;
+      }
+      .stack--md[data-astro-cid-bdabvoub] {
+        gap: 1rem;
+      }
+      .stack--lg[data-astro-cid-bdabvoub] {
+        gap: 1.5rem;
+      }
+      .stack--xl[data-astro-cid-bdabvoub] {
+        gap: 3rem;
+      }
+      .stack--product-content[data-astro-cid-bdabvoub] {
+        gap: clamp(3rem, 7.35vw, 7.9375rem);
+      }
+      .stack--section-content[data-astro-cid-bdabvoub] {
+        gap: var(--homepage-content-gap, clamp(3rem, 5vw, 5rem));
+      }
+      .stack--section-gap[data-astro-cid-bdabvoub] {
+        gap: var(--space-section-gap);
+      }
+      .stack--editorial-compact[data-astro-cid-bdabvoub] {
+        gap: clamp(4rem, 7vw, 7rem);
+      }
+      .stack--2xl[data-astro-cid-bdabvoub] {
+        gap: clamp(6rem, 11vw, 11rem);
+      }
+      .surface-card[data-astro-cid-rj463kdt] {
+        --text-primary: var(--ink-strong);
+        --text-secondary: var(--ink-soft);
+        --text-heading: var(--ink-strong);
+        --text-link: currentColor;
+        --text-accent-surface: var(--accent-soft);
+        border-radius: var(--radius-card);
+      }
+      .surface-card--radius-none[data-astro-cid-rj463kdt] {
+        border-radius: 0;
+      }
+      .surface-card--border-none[data-astro-cid-rj463kdt] {
+        border: none;
+      }
+      .surface-card--border-default[data-astro-cid-rj463kdt] {
+        border: 1px solid;
+      }
+      .surface-card--padding-sm[data-astro-cid-rj463kdt] {
+        padding: 1rem 1.15rem;
+      }
+      .surface-card--padding-md[data-astro-cid-rj463kdt] {
+        padding: 1.5rem;
+      }
+      .surface-card--padding-lg[data-astro-cid-rj463kdt] {
+        padding: 1.75rem;
+      }
+      .surface-card--padding-xl[data-astro-cid-rj463kdt] {
+        padding: 3rem;
+      }
+      .surface-card--light[data-astro-cid-rj463kdt].surface-card--default,
+      .surface-card--light[data-astro-cid-rj463kdt].surface-card--elevated {
+        border-color: var(--line-strong);
+        background: var(--surface-card);
+      }
+      .surface-card--light[data-astro-cid-rj463kdt].surface-card--elevated {
+        box-shadow: var(--shadow-panel);
+      }
+      .surface-card--light[data-astro-cid-rj463kdt].surface-card--subtle {
+        border-color: transparent;
+        background: var(--surface-card-subtle);
+      }
+      .surface-card--light[data-astro-cid-rj463kdt].surface-card--quiet {
+        border-color: transparent;
+        background: var(--surface-card);
+      }
+      .surface-card--dark[data-astro-cid-rj463kdt].surface-card--default {
+        border-color: var(--line-dark);
+        background: var(--surface-dark);
+        --text-primary: var(--ink-inverse);
+        --text-secondary: var(--ink-inverse-soft);
+        --text-heading: var(--ink-inverse);
+        --text-accent-surface: rgba(31, 124, 255, 0.16);
+        color: var(--text-primary);
+      }
+      .surface-card--dark[data-astro-cid-rj463kdt].surface-card--elevated {
+        border-color: var(--line-dark);
+        background:
+          radial-gradient(circle at 68% 118%, rgba(77, 65, 255, 0.46), transparent 28%),
+          radial-gradient(circle at 88% 104%, rgba(44, 39, 151, 0.28), transparent 34%),
+          radial-gradient(circle at 58% 92%, rgba(22, 20, 82, 0.2), transparent 42%),
+          linear-gradient(180deg, #080b15, #070914 58%, #06070f);
+        --text-primary: var(--ink-inverse);
+        --text-secondary: var(--ink-inverse-soft);
+        --text-heading: var(--ink-inverse);
+        --text-accent-surface: rgba(31, 124, 255, 0.16);
+        color: var(--text-primary);
+      }
+      .surface-card--dark[data-astro-cid-rj463kdt].surface-card--subtle {
+        border-color: transparent;
+        background: #272727;
+        --text-primary: var(--ink-inverse);
+        --text-secondary: var(--ink-inverse-soft);
+        --text-heading: var(--ink-inverse);
+        --text-accent-surface: rgba(31, 124, 255, 0.16);
+        color: var(--text-primary);
+      }
+      .surface-card--dark[data-astro-cid-rj463kdt].surface-card--quiet {
+        border-color: transparent;
+        background: var(--surface-dark-700);
+        --text-primary: var(--ink-inverse);
+        --text-secondary: var(--ink-inverse-soft);
+        --text-heading: var(--ink-inverse);
+        color: var(--text-primary);
+      }
+      .surface-card--interactive[data-astro-cid-rj463kdt] {
+        transition:
+          border-color 0.18s ease,
+          background-color 0.18s ease;
+      }
+      .form-field[data-astro-cid-v6br2s7v] {
+        display: grid;
+        gap: 0.2rem;
+      }
+      .select-field-wrap[data-astro-cid-kmd7lpqq] {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-width: 0;
+        color: var(--field-placeholder, rgba(22, 22, 21, 0.42));
+      }
+      .select-field[data-astro-cid-kmd7lpqq] {
+        display: block;
+        width: 100%;
+        min-height: 2.85rem;
+        padding: 0.7rem 2.75rem 0.7rem 1rem;
+        border: 1px solid;
+        border-radius: 8px;
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: none;
+        outline: none;
+        box-shadow: none;
+        transition:
+          border-color 0.16s ease,
+          background-color 0.16s ease,
+          box-shadow 0.16s ease,
+          color 0.16s ease;
+        border-color: var(--field-border, var(--line-strong));
+        background: var(--field-bg, var(--surface-card));
+        color: var(--field-color, var(--ink-strong));
+      }
+      .select-field[data-astro-cid-kmd7lpqq]:focus-visible {
+        box-shadow: var(--field-focus-ring, 0 0 0 3px var(--accent-soft));
+      }
+      .select-field[data-astro-cid-kmd7lpqq]:has(option[value=""]:checked) {
+        color: var(--field-placeholder, rgba(22, 22, 21, 0.42));
+      }
+      .select-field__icon[data-astro-cid-kmd7lpqq] {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+      .text-field[data-astro-cid-qowytyq3] {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        min-height: 2.85rem;
+        padding: 0.7rem 1rem;
+        border: 1px solid;
+        border-radius: 8px;
+        -webkit-appearance: none;
+        appearance: none;
+        outline: none;
+        box-shadow: none;
+        transition:
+          border-color 0.16s ease,
+          background-color 0.16s ease,
+          box-shadow 0.16s ease;
+        border-color: var(--field-border, var(--line-strong));
+        background: var(--field-bg, var(--surface-card));
+        color: var(--field-color, var(--ink-strong));
+      }
+      .text-field[data-astro-cid-qowytyq3]::placeholder {
+        color: var(--field-placeholder, rgba(22, 22, 21, 0.42));
+      }
+      .text-field[data-astro-cid-qowytyq3]:focus-visible {
+        box-shadow: var(--field-focus-ring, 0 0 0 3px var(--accent-soft));
+      }
+    </style>
+    <link rel="stylesheet" href="/styles/ImagePanelSection.css">
+    <style>
+      .label--light[data-astro-cid-tl4ucbcc] {
+        --text-secondary: var(--ink-soft);
+      }
+      .label--dark[data-astro-cid-tl4ucbcc] {
+        --text-secondary: var(--ink-inverse-soft);
+      }
+    </style>
+    <link rel="stylesheet" href="/styles/RichText.css">
+    <style>
+      .grid[data-astro-cid-2rmnt3h5] {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        min-width: 0;
+      }
+      .grid[data-astro-cid-2rmnt3h5] > * {
+        min-width: 0;
+      }
+      .grid--gap-sm[data-astro-cid-2rmnt3h5] {
+        gap: 0.75rem;
+      }
+      .grid--gap-md[data-astro-cid-2rmnt3h5] {
+        gap: 1rem;
+      }
+      .grid--gap-lg[data-astro-cid-2rmnt3h5] {
+        gap: 1.5rem;
+      }
+      .grid--gap-xl[data-astro-cid-2rmnt3h5] {
+        column-gap: clamp(0.875rem, 4.6vw, 4.25rem);
+        row-gap: clamp(2rem, 4.6vw, 4.25rem);
+      }
+      .grid--row-gap-lg[data-astro-cid-2rmnt3h5] {
+        row-gap: 1.5rem;
+      }
+      .grid--row-gap-2xl[data-astro-cid-2rmnt3h5] {
+        row-gap: 4rem;
+      }
+      @media (min-width: 760px) {
+        .grid--2[data-astro-cid-2rmnt3h5],
+        .grid--3[data-astro-cid-2rmnt3h5],
+        .grid--4[data-astro-cid-2rmnt3h5] {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (min-width: 1024px) {
+        .grid--3[data-astro-cid-2rmnt3h5] {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .grid--4[data-astro-cid-2rmnt3h5] {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+      .page-section-description__animated-title[data-astro-cid-pfcssf4l] {
+        color: var(--text-primary);
+      }
+      .page-section-description__animated-title-word[data-astro-cid-pfcssf4l] {
+        color: color-mix(in srgb, var(--text-primary) 18%, transparent);
+      }
+      [data-astro-cid-pfcssf4l][data-animated-section-description].is-visible
+        .page-section-description__animated-title-word[data-astro-cid-pfcssf4l] {
+        animation: page-section-description-title-ink 0.52s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        animation-delay: calc(var(--word-index) * 40ms);
+      }
+      @keyframes page-section-description-title-ink {
+        to {
+          color: var(--text-primary);
+        }
+      }
+      .page-section-description__animated-intro[data-astro-cid-pfcssf4l] {
+        color: var(--text-secondary);
+      }
+      .page-section-description__animated-intro-word[data-astro-cid-pfcssf4l] {
+        color: color-mix(in srgb, var(--text-secondary) 18%, transparent);
+      }
+      [data-astro-cid-pfcssf4l][data-animated-section-description].is-visible
+        .page-section-description__animated-intro-word[data-astro-cid-pfcssf4l] {
+        animation: page-section-description-intro-ink 0.52s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        animation-delay: calc(var(--word-index) * 40ms);
+      }
+      @keyframes page-section-description-intro-ink {
+        to {
+          color: var(--text-secondary);
+        }
+      }
+      .page-section-description__animated-lead[data-astro-cid-pfcssf4l] {
+        color: var(--text-primary);
+      }
+      .page-section-description__animated-lead-word[data-astro-cid-pfcssf4l] {
+        color: var(--text-secondary);
+      }
+      [data-astro-cid-pfcssf4l][data-animated-section-description].is-visible
+        .page-section-description__animated-lead-word[data-astro-cid-pfcssf4l] {
+        animation: page-section-description-lead-ink 0.52s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        animation-delay: calc(var(--word-index) * 40ms);
+      }
+      @keyframes page-section-description-lead-ink {
+        to {
+          color: var(--text-primary);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .page-section-description__animated-lead-word[data-astro-cid-pfcssf4l],
+        .page-section-description__animated-title-word[data-astro-cid-pfcssf4l] {
+          color: var(--text-primary);
+          animation: none;
+        }
+        .page-section-description__animated-intro-word[data-astro-cid-pfcssf4l] {
+          color: var(--text-secondary);
+          animation: none;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="/styles/CustomerLogoGrid.css"><title>Book a demo | Counterswarm</title><meta name="description" content="Book a demo to speak to an expert and strengthen your offensive &amp; defensive security."><meta name="robots" content="index, follow, max-image-preview:large"><link rel="canonical" href="https://counterswarm.si/book-a-demo/"><meta property="og:title" content="Book a demo | Counterswarm"><meta property="og:description" content="Book a demo to speak to an expert and strengthen your offensive &amp; defensive security."><meta property="og:type" content="website"><meta property="og:url" content="https://counterswarm.si/book-a-demo/"><meta property="og:site_name" content="Counterswarm"><meta property="og:image" content="https://counterswarm.si/images/counterswarm-social.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Counterswarm — Continuous AI Defence against AI Attacks"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Book a demo | Counterswarm"><meta name="twitter:description" content="Book a demo to speak to an expert and strengthen your offensive &amp; defensive security."><meta name="twitter:image" content="https://counterswarm.si/images/counterswarm-social.png"><meta name="twitter:image:alt" content="Counterswarm — Continuous AI Defence against AI Attacks"><meta name="google-site-verification" content="kIjHCVmIr7iEO1oZzarDtn5sOn23jI_y-7J6AuDCclw"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://counterswarm.si/#organization","name":"Counterswarm","url":"https://counterswarm.si/","logo":"https://counterswarm.si/logos/counterswarm-mark.svg"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://counterswarm.si/"},{"@type":"ListItem","position":2,"name":"Book a demo","item":"https://counterswarm.si/book-a-demo/"}]}]}</script><link rel="stylesheet" href="/styles/brand.css"></head>
+  <body data-astro-cid-37fxchfa="">
+    <main data-astro-cid-37fxchfa="">
+      <div class="book-demo-chrome" data-astro-cid-fyiebb7s="">
+  <div data-astro-cid-fyiebb7s="true" data-astro-cid-dm6k5sok="true" class="container container--default book-demo-chrome__inner">
+    <a class="book-demo-chrome__brand" href="/" aria-label="Counterswarm home" data-book-demo-home-link="" data-astro-cid-fyiebb7s="">
+      <span class="book-demo-chrome__wordmark" aria-hidden="true" data-astro-cid-fyiebb7s=""></span>
+      <span class="visually-hidden" data-astro-cid-fyiebb7s="">Counterswarm</span>
+    </a>
+    <a href="/" data-book-demo-home-link="true" data-astro-cid-fyiebb7s="true" data-astro-cid-vnzlvqnm="true" class="button button--secondary button--sm">
+      Back to website
+    </a>
+  </div>
+</div>
+
+      <script src="/scripts/initialization/booking-state-24600a59.js"></script>
+      <div class="book-demo-viewport" data-astro-cid-fyiebb7s="">
+  <section data-header-theme="light" data-header-surface="page" data-spacing-tone="light" data-astro-cid-fyiebb7s="true" data-astro-cid-sh445jdo="true" class="section section--page section--none book-demo-section">
+    <div data-astro-cid-sh445jdo="true" data-astro-cid-dm6k5sok="true" class="container container--default section__inner">
+      <div class="split split--balanced split--gap-lg split--align-center" data-astro-cid-fyiebb7s="true" data-astro-cid-wxnyy2up="">
+        <div class="split__main" data-astro-cid-wxnyy2up="">
+          <div data-astro-cid-fyiebb7s="true" data-astro-cid-sptvla6t="true" class="cluster cluster--lg cluster--column cluster--align-start cluster--justify-start cluster--wrap">
+            
+            <h1 data-book-demo-hero-title="true" data-astro-cid-fyiebb7s="true" data-astro-cid-p72ha3xh="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--display-article text--family-display text--medium display-title display-title--article display-title--default">See Counterswarm in action.</h1>
+            <div class="demo-subheader" data-book-demo-subheader="default" data-astro-cid-fyiebb7s="">
+              <p data-astro-cid-fyiebb7s="true" data-astro-cid-z2jvtqdt="true" class="text text--secondary text--lg text--family-body text--regular">
+                Speak to an expert to strengthen your offensive and defensive security.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+        <div class="split__aside" data-astro-cid-wxnyy2up="">
+          <div slot="aside" data-astro-cid-fyiebb7s="true" data-astro-cid-rj463kdt="true" class="surface-card surface-card--light surface-card--default surface-card--padding-lg surface-card--border-default surface-card--radius-default demo-form-card">
+            <div class="demo-panel" data-book-demo-panel="form" data-astro-cid-fyiebb7s="">
+              <form class="demo-form" id="wf-form-demo-request" method="post" action="#" data-business-email-form="" data-astro-cid-fyiebb7s="">
+                <input type="hidden" name="Reference Campaign ID" value="701Wj00000rUXuWIAW">
+                <input type="hidden" name="Page Slug" value="book-a-demo" data-astro-cid-fyiebb7s="">
+                <input type="hidden" name="UTM Source" data-attribution-field="UTM Source"><input type="hidden" name="UTM Medium" data-attribution-field="UTM Medium"><input type="hidden" name="UTM Campaign" data-attribution-field="UTM Campaign"><input type="hidden" name="UTM Term" data-attribution-field="UTM Term"><input type="hidden" name="UTM Content" data-attribution-field="UTM Content"><input type="hidden" name="Match Type" data-attribution-field="Match Type"><input type="hidden" name="Network" data-attribution-field="Network"><input type="hidden" name="Device" data-attribution-field="Device"><input type="hidden" name="Invite Source ID" data-attribution-field="Invite Source ID"><input type="hidden" name="GCLID" data-attribution-field="GCLID"><input type="hidden" name="GBRAID" data-attribution-field="GBRAID"><input type="hidden" name="WBRAID" data-attribution-field="WBRAID"><input type="hidden" name="Platform Campaign ID" data-attribution-field="Platform Campaign ID"><input type="hidden" name="Ad Set ID" data-attribution-field="Ad Set ID"><input type="hidden" name="Ad ID" data-attribution-field="Ad ID"><script>
+                  (() => {
+                    const initKey = "__counterswarmAttributionHiddenFieldsInit";
+
+                    const sync = () => {
+                      const attribution = window.counterswarmAttribution;
+                      if (!attribution) return;
+
+                      attribution.capture();
+                      attribution.syncHiddenFields(document);
+                    };
+
+                    sync();
+
+                    if (window[initKey]) return;
+                    window[initKey] = true;
+
+                    document.addEventListener("counterswarm:attribution-updated", () => {
+                      window.counterswarmAttribution?.syncHiddenFields(document);
+                    });
+                    document.addEventListener("astro:page-load", sync);
+                  })();
+                </script>
+                <div class="grid grid--2 grid--gap-md demo-form__grid" data-astro-cid-fyiebb7s="true" data-astro-cid-2rmnt3h5="">
+                  <label class="form-field" data-astro-cid-fyiebb7s="true" data-astro-cid-v6br2s7v="">
+                    <span tone="auto" data-astro-cid-v6br2s7v="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--semibold">
+                      First name *
+                    </span>
+                    <input type="text" name="First Name" placeholder="First name" class="text-field demo-form__control" autocomplete="given-name" autofocus="" required="" data-astro-cid-fyiebb7s="true" data-astro-cid-qowytyq3="">
+                  </label>
+                  <label class="form-field" data-astro-cid-fyiebb7s="true" data-astro-cid-v6br2s7v="">
+                    <span tone="auto" data-astro-cid-v6br2s7v="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--semibold">
+                      Last name *
+                    </span>
+                    <input type="text" name="Last Name" placeholder="Last name" class="text-field demo-form__control" autocomplete="family-name" required="" data-astro-cid-fyiebb7s="true" data-astro-cid-qowytyq3="">
+                  </label>
+                  <label class="form-field demo-form__field--full" data-astro-cid-fyiebb7s="true" data-astro-cid-v6br2s7v="">
+                    <span tone="auto" data-astro-cid-v6br2s7v="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--semibold">
+                      Business email address *
+                    </span>
+                    <input type="email" name="Email Address" placeholder="Email address" class="text-field demo-form__control" id="book-a-demo-email" autocomplete="email" pattern="[^\s@]+@(?!(?:gmail\.com|googlemail\.com|icloud\.com|me\.com|mac\.com|protonmail\.com|protonmail\.ch|proton\.me|pm\.me|tutanota\.com|tutamail\.com|aol\.com|mail\.com|web\.de|mail\.ru|rambler\.ru|qq\.com|163\.com|126\.com|sina\.com|naver\.com|daum\.net|rediffmail\.com|10minutemail\.com|guerrillamail\.com|mailinator\.com|tempmail\.org|mailinator\.com|guerrillamail\.com|sharklasers\.com|10minutemail\.com|trashmail\.com|tempmail\.com|temp-mail\.org|yopmail\.com|getnada\.com|maildrop\.cc|dispostable\.com|throwawaymail\.com|yahoo\.[a-z0-9.-]+|hotmail\.[a-z0-9.-]+|outlook\.[a-z0-9.-]+|live\.[a-z0-9.-]+|msn\.[a-z0-9.-]+|gmx\.[a-z0-9.-]+|yandex\.[a-z0-9.-]+)$)[^\s@]+\.[^\s@]+" title="please provide a valid business email" data-demo-email-input="true" data-business-email-input="true" required="" data-astro-cid-fyiebb7s="true" data-astro-cid-qowytyq3="">
+                  </label>
+                  <label class="form-field demo-form__field--full" data-astro-cid-fyiebb7s="true" data-astro-cid-v6br2s7v="">
+                    <span tone="auto" data-astro-cid-v6br2s7v="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--sm text--family-body text--semibold">
+                      How did you hear about us
+                    </span>
+                    <div class="select-field-wrap" data-astro-cid-kmd7lpqq="">
+                      <select name="Select-field-1" class="select-field demo-form__control" data-referral-source-select="true" data-astro-cid-fyiebb7s="true" data-astro-cid-kmd7lpqq="">
+                        <option value="" selected="" data-astro-cid-kmd7lpqq=""> Select... </option>
+                        <option value="linkedin" class="astro-kmd7lpqq" data-astro-cid-kmd7lpqq="">
+                          LinkedIn </option><option value="x-twitter" class="astro-kmd7lpqq" data-astro-cid-kmd7lpqq="">
+                          X/Twitter </option><option value="search-engine" class="astro-kmd7lpqq" data-astro-cid-kmd7lpqq="">
+                          Search engine </option><option value="ai-chat" class="astro-kmd7lpqq" data-astro-cid-kmd7lpqq="">
+                          AI chat </option><option value="friend-or-colleague" class="astro-kmd7lpqq" data-astro-cid-kmd7lpqq="">
+                          Friend or colleague </option><option value="counterswarm-customer" class="astro-kmd7lpqq" data-astro-cid-kmd7lpqq="">
+                          Counterswarm customer </option><option value="investor" class="astro-kmd7lpqq" data-astro-cid-kmd7lpqq="">
+                          Investor </option><option value="partner" class="astro-kmd7lpqq" data-astro-cid-kmd7lpqq="">
+                          Partner </option><option value="other" class="astro-kmd7lpqq" data-astro-cid-kmd7lpqq=""> Other </option>
+                      </select>
+                      <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="select-field__icon" aria-hidden="true" data-astro-cid-kmd7lpqq="true">
+                        <path d="M0.53125 0.530273L4.53125 4.53027L8.53125 0.530273" stroke="currentColor" stroke-width="1.5"></path>
+                      </svg>
+                    </div>
+                    <div class="demo-form__other-referral" data-referral-source-other="" hidden="" data-astro-cid-fyiebb7s="">
+                      <input type="text" name="How did you hear about us?" placeholder="Tell us more" class="text-field demo-form__control" autocomplete="off" data-referral-source-other-input="true" data-astro-cid-fyiebb7s="true" data-astro-cid-qowytyq3="">
+                    </div>
+                  </label>
+                </div>
+                <button type="submit" data-astro-cid-fyiebb7s="true" data-astro-cid-vnzlvqnm="true" class="button button--primary button--md demo-form__submit">
+                  Continue to scheduling
+                </button>
+                <p data-astro-cid-fyiebb7s="true" data-astro-cid-z2jvtqdt="true" class="text text--secondary text--sm text--family-body text--regular demo-form__privacy">
+                  See our <a href="/legal/privacy-policy/" data-astro-cid-fyiebb7s="">privacy policy</a> for how
+                  we protect your information.
+                </p>
+              </form>
+            </div>
+            <div class="demo-panel demo-success" data-book-demo-panel="success" data-astro-cid-fyiebb7s="">
+              <div data-astro-cid-fyiebb7s="true" data-astro-cid-sptvla6t="true" class="cluster cluster--md cluster--row cluster--align-center cluster--justify-start cluster--wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check" data-astro-cid-fyiebb7s="">
+                  <path d="M20 6 9 17l-5-5" data-astro-cid-fyiebb7s=""></path>
+                </svg>
+                <p data-astro-cid-fyiebb7s="true" data-astro-cid-z2jvtqdt="true" class="text text--primary text--md text--family-body text--regular">
+                  Your demo has been booked!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="book-demo-logo-section" data-astro-cid-fyiebb7s="">
+    <script type="module" src="/_astro/CustomerLogoGrid.astro_astro_type_script_index_0_lang.BLs0v5kc.js"></script><div data-astro-cid-fyiebb7s="true" data-astro-cid-dm6k5sok="true" class="container container--wide">
+      
+    </div>
+  </div>
+</div>
+ 
+
+      <script type="module" src="/_astro/BookDemoPage.astro_astro_type_script_index_0_lang.wLn3fOjX.js"></script>
+    </main>
+    <script type="module" src="/scripts/interactions/book-a-demo-ui.js"></script>
+<script type="module" src="/scripts/conversion.js"></script>
+</body></html>

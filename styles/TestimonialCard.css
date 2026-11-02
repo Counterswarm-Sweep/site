@@ -1,0 +1,165 @@
+.testimonial-card[data-astro-cid-3ba2o4vp] {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.75rem, 3vw, 2.75rem);
+  margin: 0;
+  padding: clamp(1.75rem, 3.2vw, 3rem);
+  border-radius: var(--radius-card);
+  background: var(--neutral-100);
+}
+.testimonial-card--active[data-astro-cid-3ba2o4vp] {
+  --slide-proximity: 0;
+}
+.testimonial-card--editorial[data-astro-cid-3ba2o4vp],
+.testimonial-card[data-astro-cid-3ba2o4vp]:is(.testimonial-card--featured, .testimonial-card--gallery) {
+  --testimonial-quote-font-size: var(--font-size-testimonial);
+  --testimonial-avatar-size: var(--testimonial-portrait-size, 4.375rem);
+  --testimonial-author-gap: 1.25rem;
+  padding: 0;
+  gap: clamp(3rem, 5vw, 5rem);
+  background: transparent;
+}
+.testimonial-card--editorial[data-astro-cid-3ba2o4vp] .testimonial-card__mark[data-astro-cid-3ba2o4vp],
+.testimonial-card[data-astro-cid-3ba2o4vp]:is(.testimonial-card--featured, .testimonial-card--gallery)
+  .testimonial-card__mark[data-astro-cid-3ba2o4vp] {
+  display: none;
+}
+.testimonial-card--editorial[data-astro-cid-3ba2o4vp] .testimonial-card__quote[data-astro-cid-3ba2o4vp],
+.testimonial-card[data-astro-cid-3ba2o4vp]:is(.testimonial-card--featured, .testimonial-card--gallery)
+  .testimonial-card__quote[data-astro-cid-3ba2o4vp] {
+  color: var(--neutral-500);
+  font-weight: var(--testimonial-quote-font-weight, var(--font-weight-body));
+  line-height: var(--line-height-testimonial);
+  letter-spacing: var(--letter-spacing-testimonial, -0.02em);
+}
+.testimonial-card--editorial[data-astro-cid-3ba2o4vp]
+  .testimonial-card__quote[data-astro-cid-3ba2o4vp]
+  strong,
+.testimonial-card[data-astro-cid-3ba2o4vp]:is(.testimonial-card--featured, .testimonial-card--gallery)
+  .testimonial-card__quote[data-astro-cid-3ba2o4vp]
+  strong {
+  color: inherit;
+  font-weight: inherit;
+}
+.testimonial-card--editorial[data-astro-cid-3ba2o4vp]
+  .testimonial-card__quote[data-astro-cid-3ba2o4vp]
+  strong:last-of-type,
+.testimonial-card[data-astro-cid-3ba2o4vp]:is(.testimonial-card--featured, .testimonial-card--gallery)
+  .testimonial-card__quote[data-astro-cid-3ba2o4vp]
+  strong:last-of-type {
+  color: var(--text-primary);
+}
+.testimonial-card[data-astro-cid-3ba2o4vp]:is(.testimonial-card--featured, .testimonial-card--gallery) {
+  --testimonial-quote-font-size: var(--font-size-testimonial-featured);
+  --testimonial-quote-font-weight: var(--font-weight-body);
+  min-height: var(--testimonial-featured-min-height, 20.5625rem);
+  justify-content: space-between;
+  gap: 3rem;
+}
+.testimonial-card[data-astro-cid-3ba2o4vp]:is(.testimonial-card--featured, .testimonial-card--gallery)
+  .testimonial-card__quote[data-astro-cid-3ba2o4vp] {
+  line-height: var(--line-height-testimonial-featured);
+}
+.testimonial-card[data-astro-cid-3ba2o4vp]:is(.testimonial-card--featured, .testimonial-card--gallery)
+  .testimonial-card__meta[data-astro-cid-3ba2o4vp] {
+  line-height: var(--line-height-text-sm);
+}
+@media (max-width: 759px) {
+  .testimonial-card[data-astro-cid-3ba2o4vp]:is(.testimonial-card--featured, .testimonial-card--gallery) {
+    min-height: 0;
+    gap: 2rem;
+  }
+}
+.testimonial-card[data-astro-cid-3ba2o4vp].testimonial-card--gallery {
+  --testimonial-quote-font-size: var(--font-size-testimonial-gallery);
+  min-height: 0;
+  gap: 3rem;
+}
+.testimonial-card[data-astro-cid-3ba2o4vp].testimonial-card--gallery
+  .testimonial-card__quote[data-astro-cid-3ba2o4vp] {
+  line-height: var(--line-height-testimonial-gallery);
+  letter-spacing: -0.01em;
+}
+.testimonial-card__mark[data-astro-cid-3ba2o4vp] {
+  --mark-ink-offset: 0.225em;
+  --mark-ink-height: 0.22em;
+  display: block;
+  height: calc(var(--mark-ink-offset) + var(--mark-ink-height));
+  margin-top: calc(-1 * var(--mark-ink-offset));
+  color: var(--neutral-300);
+  font-family: var(--font-pixel);
+  font-size: var(--testimonial-mark-font-size, 33.3cqw);
+  line-height: 1;
+  user-select: none;
+}
+.testimonial-card__quote[data-astro-cid-3ba2o4vp] {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--testimonial-quote-font-size, var(--font-size-text-md));
+  line-height: 1.45;
+}
+.testimonial-card__quote[data-astro-cid-3ba2o4vp] p {
+  margin: 0;
+}
+.testimonial-card__quote[data-astro-cid-3ba2o4vp] p + p {
+  margin-top: 0.65em;
+}
+.testimonial-card__quote[data-astro-cid-3ba2o4vp] strong {
+  font-weight: var(--font-weight-display);
+}
+.testimonial-card__author[data-astro-cid-3ba2o4vp] {
+  display: flex;
+  align-items: center;
+  gap: var(--testimonial-author-gap, 0.9rem);
+}
+.testimonial-card--author-top[data-astro-cid-3ba2o4vp] .testimonial-card__author[data-astro-cid-3ba2o4vp] {
+  padding-inline-end: var(--testimonial-author-controls-space, 0px);
+}
+.testimonial-card__portrait[data-astro-cid-3ba2o4vp] {
+  flex: none;
+  width: var(--testimonial-avatar-size, 3rem);
+  height: var(--testimonial-avatar-size, 3rem);
+  overflow: hidden;
+  border-radius: 50%;
+}
+.testimonial-card__avatar[data-astro-cid-3ba2o4vp] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(var(--slide-proximity, 1));
+  transition: filter 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.testimonial-card__avatar[data-astro-cid-3ba2o4vp][src$="/tobias-schindler.jpg"] {
+  transform: scale(2.7);
+  transform-origin: 43% 24%;
+}
+.testimonials.is-position-scaled .testimonial-card__avatar[data-astro-cid-3ba2o4vp] {
+  transition: none;
+}
+.testimonial-card__meta[data-astro-cid-3ba2o4vp] {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--testimonial-author-font-size, var(--font-size-text-sm));
+  line-height: 1.4;
+}
+.testimonial-card__role[data-astro-cid-3ba2o4vp] {
+  color: var(--neutral-500);
+}
+@media (max-width: 599px) {
+  .testimonial-card[data-astro-cid-3ba2o4vp]:is(.testimonial-card--featured, .testimonial-card--gallery) {
+    --testimonial-avatar-size: var(--testimonial-portrait-size, 3rem);
+    --testimonial-author-gap: 0.75rem;
+    gap: 2rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-card__avatar[data-astro-cid-3ba2o4vp] {
+    transition: none;
+  }
+}
